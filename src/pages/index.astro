@@ -41,29 +41,27 @@ const pageFaqs = [
 <BaseLayout title={pageTitle} description={pageDescription} faqs={pageFaqs}>
   <div class="stack gap-20 lg:gap-48">
     <div class="wrapper stack gap-8 lg:gap-20">
-      <header class="hero">
+      <header class="stack gap-4">
         <Hero
           title="You Are Great at What You Do. Let’s Make Sure Clients Can Find You."
           tagline="I help entrepreneurs, SMEs, and independent professionals turn unclear messaging and irregular posting into a structured communications system that builds trust and brings in clients."
           align="start"
         >
-          <div class="roles">
+          <div class="stack gap-2">
             <Pill><Icon icon="strategy" size="1.33em" /> Communications Strategy</Pill>
             <Pill><Icon icon="microphone-stage" size="1.33em" /> Social Management</Pill>
             <Pill><Icon icon="pencil-line" size="1.33em" /> Team &amp; Institutional Training</Pill>
           </div>
 
-          <div class="hero-actions">
+          <div class="stack gap-4">
             <CallToAction href={bookingUrl}>
               Book a 45-Minute Strategy Call
               <Icon icon="arrow-right" size="1.2em" />
             </CallToAction>
-            <a href="#how-i-work" class="secondary-link">See how I work &darr;</a>
+            <p>
+              <a href="#how-i-work">See how I work &darr;</a> &middot; PhD &amp; Master’s Summa Cum Laude &middot; Florence, Italy &amp; Worldwide &middot; EN / IT / ES
+            </p>
           </div>
-
-          <p class="hero-trust-line">
-            PhD &amp; Master’s Summa Cum Laude &middot; Florence, Italy &amp; Worldwide &middot; EN / IT / ES
-          </p>
         </Hero>
 
         <img
@@ -78,26 +76,22 @@ const pageFaqs = [
         <Skills />
       </div>
 
-      <section class="why-ruth">
-        <header class="why-header">
-          <h2>Why Work With Ruth</h2>
-          <p>Academic rigor combined with practical execution for real-world businesses.</p>
-        </header>
-
-        <div class="proof-grid">
-          <div class="proof-card">
+      <section class="stack gap-4">
+        <h2>Why Work With Ruth</h2>
+        <div class="stack gap-4">
+          <div>
             <h3>Academic Rigor, Practical Focus</h3>
             <p>Backed by a PhD and Master’s Summa Cum Laude, every messaging framework is built on structured audience research—not guesswork or fleeting trends.</p>
           </div>
-          <div class="proof-card">
+          <div>
             <h3>Educator &amp; University Lecturer</h3>
             <p>Experience teaching at universities and training institutions means complex marketing systems are translated into clear steps your team can actually run.</p>
           </div>
-          <div class="proof-card">
+          <div>
             <h3>Journalistic Clarity</h3>
             <p>A background in journalism ensures your brand communicates with precision, credibility, and stories that earn genuine attention.</p>
           </div>
-          <div class="proof-card">
+          <div>
             <h3>Three Continents, Three Languages</h3>
             <p>Cross-cultural fluency in English, Italian, and Spanish helps local Tuscan businesses and international brands connect seamlessly across borders.</p>
           </div>
@@ -106,25 +100,23 @@ const pageFaqs = [
     </div>
 
     <main class="wrapper stack gap-20 lg:gap-48">
-      <section class="section with-background with-cta">
-        <header class="section-header stack gap-2 lg:gap-4">
+      <section class="stack gap-8">
+        <header class="stack gap-2">
           <h3>Selected Work &amp; Case Studies</h3>
           <p>How clear positioning and structured content systems turn expertise into measurable visibility.</p>
         </header>
 
-        <div class="gallery">
-          <Grid variant="offset">
-            {
-              projects.map((project) => (
-                <li>
-                  <PortfolioPreview project={project} />
-                </li>
-              ))
-            }
-          </Grid>
-        </div>
+        <Grid variant="offset">
+          {
+            projects.map((project) => (
+              <li>
+                <PortfolioPreview project={project} />
+              </li>
+            ))
+          }
+        </Grid>
 
-        <div class="cta">
+        <div>
           <CallToAction href="/work/">
             View All Case Studies
             <Icon icon="arrow-right" size="1.2em" />
@@ -132,26 +124,24 @@ const pageFaqs = [
         </div>
       </section>
 
-      <section class="story-teaser">
-        <div class="story-content">
-          <h2>From Newsrooms to International Strategy</h2>
-          <p>
-            My career began in journalism, learning how to find the core truth of a story and communicate it clearly under pressure. Over the years, my work and academic research took me across three continents—culminating in a PhD, a Master’s Summa Cum Laude, and a move to Italy, where I rebuilt my career from the ground up. Today, from the Florence area, I bring that same investigative rigor and cross-cultural perspective to help entrepreneurs, SMEs, and institutions build communications systems that last.
-          </p>
-          <a href="/about/" class="story-link">Read my full story &rarr;</a>
-        </div>
+      <section class="stack gap-4">
+        <h2>From Newsrooms to International Strategy</h2>
+        <p>
+          My career began in journalism, learning how to find the core truth of a story and communicate it clearly under pressure. Over the years, my work and academic research took me across three continents—culminating in a PhD, a Master’s Summa Cum Laude, and a move to Italy, where I rebuilt my career from the ground up. Today, from the Florence area, I bring that same investigative rigor and cross-cultural perspective to help entrepreneurs, SMEs, and institutions build communications systems that last.
+        </p>
+        <p><a href="/about/">Read my full story &rarr;</a></p>
       </section>
 
-      <section class="section with-background bg-variant">
-        <header class="section-header stack gap-2 lg:gap-4">
+      <section class="stack gap-4">
+        <header class="stack gap-2">
           <h3>Frequently Asked Questions</h3>
           <p>Clear answers about how we turn your expertise into a working communications system.</p>
         </header>
 
-        <div class="faq-list stack gap-4">
+        <div class="stack gap-4">
           {
             pageFaqs.map((faq) => (
-              <div class="faq-item">
+              <div>
                 <h4>{faq.question}</h4>
                 <p>{faq.answer}</p>
               </div>
@@ -164,31 +154,3 @@ const pageFaqs = [
     <ContactCTA />
   </div>
 </BaseLayout>
-
-<style>
-  .hero { display: flex; flex-direction: column; align-items: center; gap: 2rem; }
-  .roles { display: none; }
-  .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1.25rem; margin-top: 1.25rem; }
-  .secondary-link { color: var(--gray-200); font-weight: 600; text-decoration: none; border-bottom: 1px solid var(--gray-500); padding-bottom: 0.15rem; }
-  .secondary-link:hover { color: var(--accent-regular); border-color: var(--accent-regular); }
-  .hero-trust-line { margin-top: 1rem; font-size: var(--text-sm); color: var(--gray-400); }
-  .hero img { aspect-ratio: 5 / 4; object-fit: cover; object-position: top; border-radius: 1.5rem; box-shadow: var(--shadow-md); }
-  .why-ruth { display: flex; flex-direction: column; gap: 2rem; }
-  .why-header { text-align: center; max-width: 50ch; margin: 0 auto; }
-  .why-header h2 { font-size: var(--text-2xl); color: var(--gray-0); margin-bottom: 0.5rem; }
-  .why-header p { color: var(--gray-300); font-size: var(--text-md); }
-  .proof-grid { display: grid; gap: 1.5rem; grid-template-columns: 1fr; }
-  @media (min-width: 50em) {
-    .proof-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
-    .why-header h2 { font-size: var(--text-4xl); }
-  }
-  .proof-card { background: var(--gray-999_40); border: 1px solid var(--gray-800); border-radius: 1rem; padding: 1.75rem; box-shadow: var(--shadow-sm); }
-  .proof-card h3 { font-size: var(--text-lg); color: var(--gray-0); margin-bottom: 0.5rem; }
-  .proof-card p { color: var(--gray-300); line-height: 1.6; }
-  .story-teaser { background: var(--gradient-subtle); border: 1px solid var(--gray-800); border-left: 4px solid var(--accent-regular); border-radius: 1.25rem; padding: 2rem 2.5rem; box-shadow: var(--shadow-sm); }
-  .story-content { max-width: 68ch; }
-  .story-content h2 { font-size: var(--text-xl); color: var(--gray-0); margin-bottom: 0.75rem; }
-  .story-content p { color: var(--gray-200); line-height: 1.7; margin-bottom: 1.25rem; }
-  .story-link { display: inline-block; font-weight: 600; color: var(--accent-regular); text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 0.1rem; }
-  .faq-list { grid-area: gallery; text-align: left; }
-  .faq-item { background: var(--gray-999_40); border: 1px solid var(--gray-800); border-radius: 0.75rem; padding: 1.25rem 1.5rem; }
