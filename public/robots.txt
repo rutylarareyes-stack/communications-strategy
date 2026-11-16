@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# Replace with your actual .pages.dev or custom domain URL once deployed
+Sitemap: https://pages.dev

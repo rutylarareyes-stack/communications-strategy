@@ -1,0 +1,10 @@
+# Your Site Name
+
+> A one-sentence summary of what your website does, who it helps, and what topics it covers.
+
+## Core Pages
+- [Home & Main Guide](https://pages.dev): Overview, key facts, and frequently asked questions about your main topic.
+
+## Key Facts
+- Replace this bullet with 2–3 verifiable, high-signal facts about your niche or service.
+- Keep descriptions factual and free of hype so LLMs can accurately summarize your site.

@@ -1,0 +1,76 @@
+---
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalURL?: string;
+  type?: 'website' | 'article';
+  publishDate?: string;
+  faqs?: FAQItem[];
+}
+
+const {
+  title,
+  description,
+  canonicalURL = Astro.url.href,
+  type = 'website',
+  publishDate,
+  faqs = [],
+} = Astro.props;
+
+const siteName = "Your Site Name"; // Change this to your project name
+
+// Core WebSite or Article Schema
+const mainSchema = {
+  "@context": "https://schema.org",
+  "@type": type === 'article' ? "Article" : "WebSite",
+  "name": title,
+  "headline": title,
+  "description": description,
+  "url": canonicalURL,
+  ...(publishDate && { "datePublished": publishDate }),
+  "publisher": {
+    "@type": "Organization",
+    "name": siteName
+  }
+};
+
+// FAQ Schema for AEO Direct Answers
+const faqSchema = faqs.length > 0 ? {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((faq) => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }))
+} : null;
+---
+
+<!-- Standard SEO -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalURL} />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+
+<!-- OpenGraph / Social -->
+<meta property="og:type" content={type} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:site_name" content={siteName} />
+
+<!-- JSON-LD Structured Data for Google & AI Bots -->
+<script type="application/ld+json" set:html={JSON.stringify(mainSchema)} />
+{faqSchema && (
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+)}

@@ -1,0 +1,68 @@
+---
+import SEOHead from '../components/SEOHead.astro';
+
+const pageTitle = "Main Topic Keyword | Clear Value Proposition";
+const pageDescription = "A concise, direct 150-character summary answering what this page solves for users and AI search engines.";
+
+// Add 3–5 real questions your audience asks
+const pageFaqs = [
+  {
+    question: "What is the main benefit of this solution?",
+    answer: "Provide a clear, factual 1–2 sentence answer directly addressing the question without fluff."
+  },
+  {
+    question: "How much does it cost to get started?",
+    answer: "State the exact pricing or free availability clearly so AI engines can extract it as a direct quote."
+  }
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <SEOHead 
+      title={pageTitle} 
+      description={pageDescription} 
+      faqs={pageFaqs}
+    />
+    <style>
+      body { font-family: system-ui, sans-serif; line-height: 1.6; max-width: 720px; margin: 2rem auto; padding: 0 1rem; color: #111; }
+      h1, h2 { line-height: 1.25; }
+      .summary-box { background: #f4f6f8; padding: 1rem 1.25rem; border-left: 4px solid #0066cc; margin: 1.5rem 0; }
+      details { margin-bottom: 1rem; border-bottom: 1px solid #ddd; padding-bottom: 0.75rem; }
+      summary { font-weight: 600; cursor: pointer; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article>
+        <h1>{pageTitle}</h1>
+        
+        <!-- Direct Answer Block (Ideal for AI Overviews & Featured Snippets) -->
+        <div class="summary-box">
+          <strong>Quick Answer:</strong> Write a clear, 40-to-60-word direct answer to your page's main query right at the top. AI crawlers prioritize concise, factual summaries.
+        </div>
+
+        <section>
+          <h2>Key Facts & Breakdown</h2>
+          <p>Use clear subheadings, bullet points, and factual statements rather than vague marketing language.</p>
+          <ul>
+            <li><strong>Fact 1:</strong> Specific detail with numbers or clear outcomes.</li>
+            <li><strong>Fact 2:</strong> Comparison or step-by-step explanation.</li>
+          </ul>
+        </section>
+
+        <!-- Visible FAQ Section matching your JSON-LD Schema -->
+        <section>
+          <h2>Frequently Asked Questions</h2>
+          {pageFaqs.map((faq) => (
+            <details open>
+              <summary>{faq.question}</summary>
+              <p>{faq.answer}</p>
+            </details>
+          ))}
+        </section>
+      </article>
+    </main>
+  </body>
+</html>
