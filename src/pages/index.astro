@@ -1,68 +1,285 @@
 ---
-import SEOHead from '../components/SEOHead.astro';
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CallToAction from '../components/CallToAction.astro';
+import Grid from '../components/Grid.astro';
+import Hero from '../components/Hero.astro';
+import Icon from '../components/Icon.astro';
+import Pill from '../components/Pill.astro';
+import PortfolioPreview from '../components/PortfolioPreview.astro';
+import ContactCTA from '../components/ContactCTA.astro';
+import Skills from '../components/Skills.astro';
 
-const pageTitle = "Main Topic Keyword | Clear Value Proposition";
-const pageDescription = "A concise, direct 150-character summary answering what this page solves for users and AI search engines.";
+const projects = (await getCollection('work'))
+  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
+  .slice(0, 4);
 
-// Add 3–5 real questions your audience asks
+const pageTitle = 'Ruty Lara Reyes | Communications Strategy & Brand Positioning';
+const pageDescription = 'Strategic communications consultant helping organizations clarify their message, build authority, and connect with key audiences.';
+
 const pageFaqs = [
   {
-    question: "What is the main benefit of this solution?",
-    answer: "Provide a clear, factual 1–2 sentence answer directly addressing the question without fluff."
+    question: 'What does a communications strategist do?',
+    answer: 'A communications strategist designs clear messaging frameworks, public relations plans, and content systems that align an organization’s goals with the needs of its target audience.'
   },
   {
-    question: "How much does it cost to get started?",
-    answer: "State the exact pricing or free availability clearly so AI engines can extract it as a direct quote."
+    question: 'Who benefits from strategic communications consulting?',
+    answer: 'Founders, executives, non-profits, and growing brands that need consistent brand positioning, crisis readiness, and high-impact storytelling across media and digital channels.'
+  },
+  {
+    question: 'How do we get started on a communications strategy?',
+    answer: 'We begin with a focused audit of your current messaging and audience perception, followed by a tailored roadmap covering core narratives, channel priorities, and measurable milestones.'
   }
 ];
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <SEOHead 
-      title={pageTitle} 
-      description={pageDescription} 
-      faqs={pageFaqs}
-    />
-    <style>
-      body { font-family: system-ui, sans-serif; line-height: 1.6; max-width: 720px; margin: 2rem auto; padding: 0 1rem; color: #111; }
-      h1, h2 { line-height: 1.25; }
-      .summary-box { background: #f4f6f8; padding: 1rem 1.25rem; border-left: 4px solid #0066cc; margin: 1.5rem 0; }
-      details { margin-bottom: 1rem; border-bottom: 1px solid #ddd; padding-bottom: 0.75rem; }
-      summary { font-weight: 600; cursor: pointer; }
-    </style>
-  </head>
-  <body>
-    <main>
-      <article>
-        <h1>{pageTitle}</h1>
-        
-        <!-- Direct Answer Block (Ideal for AI Overviews & Featured Snippets) -->
-        <div class="summary-box">
-          <strong>Quick Answer:</strong> Write a clear, 40-to-60-word direct answer to your page's main query right at the top. AI crawlers prioritize concise, factual summaries.
+<BaseLayout title={pageTitle} description={pageDescription} faqs={pageFaqs}>
+  <div class="stack gap-20 lg:gap-48">
+    <div class="wrapper stack gap-8 lg:gap-20">
+      <header class="hero">
+        <Hero
+          title="Strategic Communications That Drive Clarity & Trust"
+          tagline="I help leaders and organizations turn complex ideas into clear narratives that resonate across media, stakeholders, and AI search."
+          align="start"
+        >
+          <div class="roles">
+            <Pill><Icon icon="strategy" size="1.33em" /> Brand Positioning</Pill>
+            <Pill><Icon icon="microphone-stage" size="1.33em" /> Executive Messaging</Pill>
+            <Pill><Icon icon="pencil-line" size="1.33em" /> Editorial Strategy</Pill>
+          </div>
+        </Hero>
+
+        <img
+          alt="Communications Strategy Portfolio"
+          width="480"
+          height="620"
+          src="/assets/portrait.jpg"
+        />
+      </header>
+
+      <Skills />
+
+      <!-- AEO Quick Answer Block styled to match the Portfolio theme -->
+      <section class="aeo-box">
+        <h2>Core Approach</h2>
+        <p>
+          <strong>Quick Summary:</strong> Effective communications strategy bridges the gap between what an organization does and why its audience cares. By combining audience research, structured narrative frameworks, and consistent multi-channel execution, brands build lasting credibility with both people and modern search engines.
+        </p>
+      </section>
+    </div>
+
+    <main class="wrapper stack gap-20 lg:gap-48">
+      <section class="section with-background with-cta">
+        <header class="section-header stack gap-2 lg:gap-4">
+          <h3>Selected Work & Case Studies</h3>
+          <p>Explore recent communications frameworks, campaigns, and strategic initiatives.</p>
+        </header>
+
+        <div class="gallery">
+          <Grid variant="offset">
+            {
+              projects.map((project) => (
+                <li>
+                  <PortfolioPreview project={project} />
+                </li>
+              ))
+            }
+          </Grid>
         </div>
 
-        <section>
-          <h2>Key Facts & Breakdown</h2>
-          <p>Use clear subheadings, bullet points, and factual statements rather than vague marketing language.</p>
-          <ul>
-            <li><strong>Fact 1:</strong> Specific detail with numbers or clear outcomes.</li>
-            <li><strong>Fact 2:</strong> Comparison or step-by-step explanation.</li>
-          </ul>
-        </section>
+        <div class="cta">
+          <CallToAction href="/work/">
+            View All Projects
+            <Icon icon="arrow-right" size="1.2em" />
+          </CallToAction>
+        </div>
+      </section>
 
-        <!-- Visible FAQ Section matching your JSON-LD Schema -->
-        <section>
-          <h2>Frequently Asked Questions</h2>
-          {pageFaqs.map((faq) => (
-            <details open>
-              <summary>{faq.question}</summary>
-              <p>{faq.answer}</p>
-            </details>
-          ))}
-        </section>
-      </article>
+      <!-- Styled AEO FAQ Section matching JSON-LD Schema -->
+      <section class="section with-background bg-variant">
+        <header class="section-header stack gap-2 lg:gap-4">
+          <h3>Frequently Asked Questions</h3>
+          <p>Direct answers about strategic communications and consulting engagements.</p>
+        </header>
+
+        <div class="faq-list stack gap-4">
+          {
+            pageFaqs.map((faq) => (
+              <details class="faq-item" open>
+                <summary>{faq.question}</summary>
+                <p>{faq.answer}</p>
+              </details>
+            ))
+          }
+        </div>
+      </section>
     </main>
-  </body>
-</html>
+
+    <ContactCTA />
+  </div>
+</BaseLayout>
+
+<style>
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .roles {
+    display: none;
+  }
+
+  .hero img {
+    aspect-ratio: 5 / 4;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-md);
+  }
+
+  .aeo-box {
+    background: var(--gradient-subtle);
+    border: 1px solid var(--gray-800);
+    border-left: 4px solid var(--accent-regular);
+    border-radius: 1rem;
+    padding: 1.5rem 2rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .aeo-box h2 {
+    font-size: var(--text-lg);
+    margin-bottom: 0.5rem;
+    color: var(--gray-0);
+  }
+
+  .aeo-box p {
+    color: var(--gray-200);
+    line-height: 1.6;
+  }
+
+  .faq-list {
+    grid-area: gallery;
+    text-align: left;
+  }
+
+  .faq-item {
+    background: var(--gray-999_40);
+    border: 1px solid var(--gray-800);
+    border-radius: 0.75rem;
+    padding: 1.25rem 1.5rem;
+  }
+
+  .faq-item summary {
+    font-weight: 600;
+    font-size: var(--text-md);
+    color: var(--gray-0);
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+  }
+
+  .faq-item p {
+    color: var(--gray-300);
+    line-height: 1.6;
+  }
+
+  @media (min-width: 50em) {
+    .hero {
+      display: grid;
+      grid-template-columns: 6fr 4fr;
+      padding-inline: 2.5rem;
+      gap: 3.75rem;
+    }
+
+    .roles {
+      margin-top: 0.5rem;
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .hero img {
+      aspect-ratio: 3 / 4;
+      border-radius: 4.5rem;
+      object-fit: cover;
+    }
+  }
+
+  .section {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .with-background {
+    position: relative;
+  }
+
+  .with-background::before {
+    --hero-bg: var(--bg-image-subtle-2);
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    left: 50%;
+    width: 100vw;
+    aspect-ratio: calc(2.25 / var(--bg-scale));
+    top: 0;
+    transform: translateY(-75%) translateX(-50%);
+    background:
+      url('/assets/backgrounds/noise.png') top center/220px repeat,
+      var(--hero-bg) center center / var(--bg-gradient-size) no-repeat,
+      var(--gray-999);
+    background-blend-mode: overlay, normal, normal;
+    mix-blend-mode: var(--bg-blend-mode);
+    z-index: -1;
+  }
+
+  .with-background.bg-variant::before {
+    --hero-bg: var(--bg-image-subtle-1);
+  }
+
+  .section-header {
+    justify-self: center;
+    text-align: center;
+    max-width: 50ch;
+    font-size: var(--text-md);
+    color: var(--gray-300);
+  }
+
+  .section-header h3 {
+    font-size: var(--text-2xl);
+  }
+
+  @media (min-width: 50em) {
+    .section {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas: 'header header header header' 'gallery gallery gallery gallery';
+      gap: 5rem;
+    }
+
+    .section.with-cta {
+      grid-template-areas: 'header header header cta' 'gallery gallery gallery gallery';
+    }
+
+    .section-header {
+      grid-area: header;
+      font-size: var(--text-lg);
+    }
+
+    .section-header h3 {
+      font-size: var(--text-4xl);
+    }
+
+    .with-cta .section-header {
+      justify-self: flex-start;
+      text-align: left;
+    }
+
+    .gallery {
+      grid-area: gallery;
+    }
+
+    .cta {
+      grid-area: cta;
+    }
+  }
+</style>
