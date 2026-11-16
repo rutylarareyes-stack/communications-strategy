@@ -13,5 +13,4 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
-# Replace with your actual .pages.dev or custom domain URL once deployed
-Sitemap: https://pages.dev
+Sitemap: https://workers.dev
