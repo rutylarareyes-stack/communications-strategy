@@ -1,120 +1,214 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
 import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
-import BaseLayout from '../layouts/BaseLayout.astro';
+
+const pageTitle = 'About Ruth Lara Reyes | Marketing & Communications Strategist';
+const pageDescription = 'From journalism in Ecuador to a PhD in Italy and international work across Latin America, Europe, and the Middle East. Based in Chianti, Tuscany, working in EN, IT, and ES.';
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Ruth Lara Reyes",
+  "jobTitle": "Marketing & Communications Strategist",
+  "url": "https://workers.dev",
+  "homeLocation": {
+    "@type": "Place",
+    "name": "Chianti, Tuscany, Italy"
+  },
+  "alumniOf": [
+    {
+      "@type": "EducationalOrganization",
+      "name": "PhD in International Cooperation (Italy)"
+    },
+    {
+      "@type": "EducationalOrganization",
+      "name": "Master's in Communication (Summa Cum Laude)"
+    }
+  ],
+  "knowsLanguage": ["English", "Italian", "Spanish"],
+  "sameAs": [
+    "https://linkedin.com"
+  ]
+};
 ---
 
-<BaseLayout title="About | Jeanine White" description="About Jeanine White Lorem Ipsum">
-	<div class="stack gap-20">
-		<main class="wrapper about">
-			<Hero
-				title="About"
-				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
-			>
-				<img
-					width="1553"
-					height="873"
-					src="/assets/at-work.jpg"
-					alt="Jeanine White at work with a colleague"
-				/>
-			</Hero>
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
 
-			<section>
-				<h2 class="section-title">Background</h2>
-				<div class="content">
-					<p>
-						Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a> makes people happy.
-						Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin nibh nisl
-						condimentum id venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc. Arcu
-						odio ut sem nulla pharetra diam sit amet. Diam quis enim lobortis scelerisque fermentum
-						dui faucibus in ornare.
-					</p>
-					<p>
-						Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis
-						natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl
-						condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel
-						quam elementum pulvinar etiam non.
-					</p>
-					<p>
-						Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet
-						eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra.
-						Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl
-						pretium fusce.
-					</p>
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Education</h2>
-				<div class="content">
-					<p>Corporis voluptates tenetur laudantium.</p>
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Skills</h2>
-				<div class="content">
-					<p>officia unde omnis</p>
-				</div>
-			</section>
-		</main>
+  <div class="stack gap-20">
+    <main class="wrapper about">
+      <Hero
+        title="About Me"
+        tagline="The strategic mind behind leaders and businesses—combining journalistic clarity, academic rigor, and practical digital execution."
+      >
+        <img
+          width="1553"
+          height="873"
+          src="/assets/at-work.jpg"
+          alt="Ruth Lara Reyes working on communications strategy in Tuscany"
+        />
+      </Hero>
 
-		<ContactCTA />
-	</div>
+      <!-- AEO / GEO Quick Entity Summary for AI Search Engines -->
+      <section class="aeo-summary">
+        <h2>At a Glance</h2>
+        <p>
+          <strong>Ruth Lara Reyes</strong> is a multilingual marketing and communications strategist based in the <strong>Chianti hills near Florence, Italy</strong>. With a background in journalism, a <strong>Master’s in Communication (Summa Cum Laude)</strong>, and a <strong>PhD in International Cooperation</strong>, she has lived and worked across Latin America, Europe, and the Middle East—helping entrepreneurs, SMEs, and institutions build clear positioning and structured content systems in <strong>English, Italian, and Spanish</strong>.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="section-title">A Little About Me</h2>
+        <div class="content">
+          <p>
+            When I watched TV in my grandmother’s room, I used to watch the news with her. When I was alone, I would try to recreate the TV news programme, turning it into a sort of role-play game. As an only child, I spent much of my time by myself, playing with my imaginary friend and sometimes with my dog.
+          </p>
+          <p>
+            That girl grew up wanting to study journalism. Together with her imaginary friend, she imagined a job where she could work with politicians—in Ecuador, politicians and elections come and go pretty quickly—and become their advisor.
+          </p>
+          <p>
+            I never wanted to be in front of people or lead something. I’ve always wanted to be the strategic mind behind the leader, something along the lines of Jobs and Wozniak, or Walt Disney and his brother Roy.
+          </p>
+          <p>
+            Now I finally have a name for what I always wanted to be: <strong>a strategist</strong>. And it’s something I genuinely enjoy doing.
+          </p>
+          <p>
+            A strategist researches, connects the dots, and looks at seemingly obvious things through different lenses. It’s about understanding the bigger picture, identifying opportunities, and turning insights into clear, actionable direction. It’s also about making sense of complexity, asking the right questions, and developing strategies that move ideas from the drawing board to execution.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title">Three Continents &amp; Rebuilding</h2>
+        <div class="content">
+          <p>
+            Getting here wasn’t straightforward. My career has never been a straight line.
+          </p>
+          <p>
+            I started as a journalist in Ecuador, drawn to stories that had a purpose. That led me to a <strong>Master’s in Communication</strong>, which I completed with honours (<strong>Summa Cum Laude</strong>), followed by a <strong>PhD in International Cooperation</strong> in Italy, because I wanted to keep researching and understanding the bigger picture.
+          </p>
+          <p>
+            Since then, I’ve lived and worked across <strong>Latin America, Europe, and the Middle East</strong>. I’ve lectured in Ecuador, delivered diversity and cross-cultural training in Milan, and worked as an interpreter and Spanish trainer in Dubai. I also spent time in the UK before settling in Italy in 2019. I now live in the famous Chianti hills in Tuscany.
+          </p>
+          <p>
+            Moving countries, becoming a mother, and rebuilding my career taught me that adaptability is one of the most valuable skills there is. I had to start from scratch, combining academic rigour with hands-on experience in digital strategy and marketing.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title">How I Help Today</h2>
+        <div class="content">
+          <p>
+            Today, I work with professionals and businesses that want to communicate with greater clarity and purpose, strengthen their visibility and reputation, and create more opportunities for growth.
+          </p>
+          <p>
+            Whether it’s understanding an audience, finding the right positioning, developing a communication strategy, or bringing a campaign to life, I combine research, strategic thinking, and practical execution to help turn communication challenges into clear next steps.
+          </p>
+          <p>
+            I work across <strong>English, Italian, and Spanish</strong>, bringing an international perspective to every project—both locally in Florence and Chianti and online with clients worldwide.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title">Education &amp; Credentials</h2>
+        <div class="content">
+          <ul>
+            <li><strong>PhD in International Cooperation</strong> — Italy</li>
+            <li><strong>Master’s in Communication (Summa Cum Laude)</strong></li>
+            <li><strong>Background in Journalism &amp; University Lecturing</strong> — Ecuador, Italy (Milan &amp; Tuscany), Dubai, and the UK</li>
+            <li><strong>Working Languages:</strong> English, Italian, and Spanish</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <ContactCTA />
+  </div>
 </BaseLayout>
 
 <style>
-	.about {
-		display: flex;
-		flex-direction: column;
-		gap: 3.5rem;
-	}
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+  }
 
-	img {
-		margin-top: 1.5rem;
-		border-radius: 1.5rem;
-		box-shadow: var(--shadow-md);
-	}
+  img {
+    margin-top: 1.5rem;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-md);
+  }
 
-	section {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-		color: var(--gray-200);
-	}
+  .aeo-summary {
+    background: var(--gradient-subtle);
+    border: 1px solid var(--gray-800);
+    border-left: 4px solid var(--accent-regular);
+    border-radius: 1rem;
+    padding: 1.5rem 2rem;
+    box-shadow: var(--shadow-sm);
+    display: block;
+  }
 
-	.section-title {
-		grid-column-start: 1;
-		font-size: var(--text-xl);
-		color: var(--gray-0);
-	}
+  .aeo-summary h2 {
+    font-size: var(--text-lg);
+    color: var(--gray-0);
+    margin-bottom: 0.5rem;
+  }
 
-	.content {
-		grid-column: 2 / 4;
-	}
+  .aeo-summary p {
+    color: var(--gray-200);
+    line-height: 1.65;
+  }
 
-	.content :global(a) {
-		text-decoration: 1px solid underline transparent;
-		text-underline-offset: 0.25em;
-		transition: text-decoration-color var(--theme-transition);
-	}
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: var(--gray-200);
+  }
 
-	.content :global(a:hover),
-	.content :global(a:focus) {
-		text-decoration-color: currentColor;
-	}
+  .section-title {
+    grid-column-start: 1;
+    font-size: var(--text-xl);
+    color: var(--gray-0);
+  }
 
-	@media (min-width: 50em) {
-		.about {
-			display: grid;
-			grid-template-columns: 1fr 60% 1fr;
-		}
+  .content {
+    grid-column: 2 / 4;
+    display: flex;
+    flex-direction: column;
+    gap: 1.15rem;
+    line-height: 1.7;
+  }
 
-		.about > :global(:first-child) {
-			grid-column-start: 2;
-		}
+  .content ul {
+    padding-left: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 
-		section {
-			display: contents;
-			font-size: var(--text-lg);
-		}
-	}
+  @media (min-width: 50em) {
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 60% 1fr;
+    }
+
+    .about > :global(:first-child),
+    .aeo-summary {
+      grid-column: 1 / 4;
+    }
+
+    section {
+      display: contents;
+      font-size: var(--text-lg);
+    }
+
+    .aeo-summary {
+      display: block;
+    }
+  }
 </style>
