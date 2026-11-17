@@ -41,19 +41,19 @@ const pageFaqs = [
 <BaseLayout title={pageTitle} description={pageDescription} faqs={pageFaqs}>
   <div class="stack gap-20 lg:gap-48">
     <div class="wrapper stack gap-8 lg:gap-20">
-      <header class="stack gap-4">
+      <header class="hero-grid">
         <Hero
           title="You Are Great at What You Do. Let’s Make Sure Clients Can Find You."
           tagline="I help entrepreneurs, SMEs, and independent professionals turn unclear messaging and irregular posting into a structured communications system that builds trust and brings in clients."
           align="start"
         >
-          <div class="stack gap-2">
+          <div class="roles-row">
             <Pill><Icon icon="strategy" size="1.33em" /> Communications Strategy</Pill>
             <Pill><Icon icon="microphone-stage" size="1.33em" /> Social Management</Pill>
             <Pill><Icon icon="pencil-line" size="1.33em" /> Team &amp; Institutional Training</Pill>
           </div>
 
-          <div class="stack gap-4">
+          <div class="hero-actions">
             <CallToAction href={bookingUrl}>
               Book a 45-Minute Strategy Call
               <Icon icon="arrow-right" size="1.2em" />
@@ -78,20 +78,20 @@ const pageFaqs = [
 
       <section class="stack gap-4">
         <h2>Why Work With Ruth</h2>
-        <div class="stack gap-4">
-          <div>
+        <div class="proof-grid">
+          <div class="proof-card">
             <h3>Academic Rigor, Practical Focus</h3>
             <p>Backed by a PhD and Master’s Summa Cum Laude, every messaging framework is built on structured audience research—not guesswork or fleeting trends.</p>
           </div>
-          <div>
+          <div class="proof-card">
             <h3>Educator &amp; University Lecturer</h3>
             <p>Experience teaching at universities and training institutions means complex marketing systems are translated into clear steps your team can actually run.</p>
           </div>
-          <div>
+          <div class="proof-card">
             <h3>Journalistic Clarity</h3>
             <p>A background in journalism ensures your brand communicates with precision, credibility, and stories that earn genuine attention.</p>
           </div>
-          <div>
+          <div class="proof-card">
             <h3>Three Continents, Three Languages</h3>
             <p>Cross-cultural fluency in English, Italian, and Spanish helps local Tuscan businesses and international brands connect seamlessly across borders.</p>
           </div>
@@ -124,8 +124,8 @@ const pageFaqs = [
         </div>
       </section>
 
-      <section class="stack gap-4">
-        <h2>From Newsrooms to International Strategy</h2>
+      <section class="story-teaser">
+        <h2>From Research to International Strategy</h2>
         <p>
           My career began in journalism, learning how to find the core truth of a story and communicate it clearly under pressure. Over the years, my work and academic research took me across three continents—culminating in a PhD, a Master’s Summa Cum Laude, and a move to Italy, where I rebuilt my career from the ground up. Today, from the Florence area, I bring that same investigative rigor and cross-cultural perspective to help entrepreneurs, SMEs, and institutions build communications systems that last.
         </p>
@@ -141,7 +141,7 @@ const pageFaqs = [
         <div class="stack gap-4">
           {
             pageFaqs.map((faq) => (
-              <div>
+              <div class="faq-card">
                 <h4>{faq.question}</h4>
                 <p>{faq.answer}</p>
               </div>
