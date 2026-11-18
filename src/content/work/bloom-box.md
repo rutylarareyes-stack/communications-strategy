@@ -1,23 +1,59 @@
 ---
-title: Bloom Box
-publishDate: 2019-12-01 00:00:00
-img: /assets/stock-2.jpg
-img_alt: A bright pink sheet of paper used to wrap flowers curves in front of rich blue background
+title: Integrated B2B Communications & Brand Repositioning
+publishDate: 2026-03-01 00:00:00
+img: /assets/stock-1.jpg
+img_alt: Industrial manufacturing and B2B communications strategy across EMEA
 description: |
-  We paired with a cutting-edge music API and a team of horticulturalists
-  to build AI-generated playlists that maximize houseplant health.
+  Consolidating brand identity and driving 60% annual organic community growth across EMEA after nine European acquisitions for US manufacturing leader Lippert.
 tags:
-  - Dev
-  - Branding
-  - Backend
+  - Communications Strategy
+  - B2B & Brand Repositioning
+  - Done For You
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere commodo venenatis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam non ligula vel metus efficitur hendrerit. In hac habitasse platea dictumst. Praesent et mauris ut mi dapibus semper. Curabitur tortor justo, efficitur sit amet pretium cursus, porta eget odio. Cras ac venenatis dolor. Donec laoreet posuere malesuada. Curabitur nec mi tempor, placerat leo sit amet, tincidunt est. Quisque pellentesque venenatis magna, eget tristique nibh pulvinar in. Vestibulum vitae volutpat arcu. Aenean ut malesuada odio, sit amet pellentesque odio. Suspendisse nunc elit, blandit nec hendrerit non, aliquet at magna. Donec id leo ut nulla sagittis sodales.
+**Sector:** RV, Marine & Industrial Manufacturing (Italy & EMEA)  
+**Engagement Model:** Done For You (Hybrid Strategic & Execution Partner)  
+**Working Language:** English  
 
-Integer vitae nibh elit. Suspendisse eget urna eu neque bibendum pharetra. Sed interdum lectus sem, in pulvinar magna dignissim vel. Quisque maximus at urna nec laoreet. Suspendisse potenti. Vestibulum rhoncus sem ut mi pellentesque, in vestibulum erat blandit. Aliquam sodales dui ac maximus consectetur. Duis quis est vehicula, imperdiet nisl nec, fermentum erat. Duis tortor diam, pharetra eu euismod in, vehicula non eros. Curabitur facilisis dui at erat ultrices gravida. In at nunc ultricies, pulvinar mi vel, sagittis mauris. Praesent pharetra posuere purus ac imperdiet. Nulla facilisi.
+### At a Glance: Measurable Impact
 
-Sed pulvinar porttitor mi in ultricies. Etiam non dolor gravida eros pulvinar pellentesque et dictum ex. Proin eu ornare ligula, sed condimentum dui. Vivamus tincidunt tellus mi, sed semper ipsum pharetra a. Suspendisse sollicitudin at sapien nec volutpat. Etiam justo urna, laoreet ac lacus sed, ultricies facilisis dolor. Integer posuere, metus vel viverra gravida, risus elit ornare magna, id feugiat erat risus ullamcorper libero. Proin vitae diam auctor, laoreet lorem vitae, varius tellus.
+* **60% annual organic community growth** across social media channels without paid audience acquisition.
+* **1.5 million views** generated through targeted European influencer marketing campaigns.
+* **EMEA-wide dealer alignment** across nine acquired companies transitioning from legacy brands to the unified Lippert identity.
 
-Mauris sed eros in ex maximus volutpat. Suspendisse potenti. Donec lacinia justo consectetur sagittis tempor. Proin ullamcorper nisi vitae auctor rhoncus. Sed tristique aliquam augue. Pellentesque vitae fringilla ligula. Nulla arcu elit, efficitur eu nunc malesuada, eleifend tincidunt orci. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer mattis orci in bibendum ultricies. Quisque a dui erat. Phasellus et vulputate ipsum. Proin metus ex, lobortis nec ornare eget, bibendum ut sapien. Aliquam in dolor lobortis, aliquam tellus a, congue augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+---
 
-Aenean pretium purus augue, ut bibendum erat convallis quis. Cras condimentum quis velit ac mollis. Suspendisse non purus fringilla, venenatis nisl porta, finibus odio. Curabitur aliquet metus faucibus libero interdum euismod. Morbi sed magna nisl. Morbi odio nibh, facilisis vel sapien eu, tempus tincidunt erat. Nullam erat velit, sagittis at purus quis, tristique scelerisque tortor. Pellentesque lacinia tortor id est aliquam viverra. Vestibulum et diam ac ipsum mollis fringilla.
+### The Challenge
+
+Following the acquisition of nine European companies, **Lippert**—a leading US manufacturer in the RV and Marine sectors—faced the challenge of consolidating its brand presence across Europe.
+
+With several legacy brands being phased out, the company needed to strengthen Lippert's recognition, align communication across different regional markets, and build stronger relationships with dealers and end customers. Despite its established position in the US, Lippert's digital presence and brand visibility across EMEA required structured strategic development.
+
+---
+
+### Strategic Approach & Execution
+
+Initially joining as Social Media Specialist, I progressively expanded into a full-time strategic and execution partner to the marketing team—bridging brand positioning, digital communications, PR, influencer marketing, and internal leadership communications.
+
+* **Digital Audit & Audience Strategy:** Conducted a comprehensive digital audit to assess existing communication channels, uncover visibility gaps, and define Ideal Customer Profiles (ICPs) to guide targeting.
+* **Brand Alignment & Dealer Engagement:** Partnered with European dealers to reinforce Lippert's unified brand identity, encouraging consistent messaging and visual representation across local markets.
+* **Multi-Channel Social Media Management:** Built and managed B2B and B2C social media communication across platforms, adapting messaging to regional audiences and commercial goals.
+* **Integrated Rebranding Campaign:** Supported the European brand transition through coordinated digital PR, social media rollouts, and creator partnerships.
+* **Influencer Marketing & Asset Creation:** Coordinated targeted collaborations that generated **1.5 million views** while producing high-quality photo and video assets for Lippert's European content library.
+* **Website & Digital Touchpoints:** Collaborated with the web development team to launch a European **dealer locator**—making it easier for B2B and B2C audiences to find local partners—and supported a new blog section to strengthen organic content marketing.
+* **Employer Branding & C-Level LinkedIn Training:** Worked directly with executive stakeholders on employer branding campaigns and delivered tailored LinkedIn training to strengthen leadership visibility and internal communication capabilities.
+
+---
+
+### Results & Business Impact
+
+* **60% Annual Organic Growth:** Expanded social media communities by 60% year-over-year organically without paid follower acquisition.
+* **1.5 Million Campaign Views:** Scaled brand visibility across key European RV and outdoor audiences through structured influencer collaborations.
+* **Dealer Network Adoption:** Dealers actively supported the rebranding by adopting Lippert's updated visual identity and messaging across their own channels.
+* **Unified Digital Ecosystem:** Connected social media, website content, dealer touchpoints, and influencer-generated assets into a cohesive EMEA brand presence.
+
+---
+
+### Key Takeaway
+
+A comprehensive brand transition requires far more than a new logo. It demands consistent, structured communication across channels, regional markets, and stakeholder relationships—combining strategic audience research with hands-on execution to turn post-merger complexity into unified brand recognition.
