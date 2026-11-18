@@ -40,7 +40,7 @@ Initially joining as Social Media Specialist, I progressively expanded into a fu
 * **Multi-Channel Social Media Management:** Built and managed B2B and B2C social media communication across platforms, adapting messaging to regional audiences and commercial goals.
 * **Integrated Rebranding Campaign:** Supported the European brand transition through coordinated digital PR, social media rollouts, and creator partnerships.
 * **Influencer Marketing & Asset Creation:** Coordinated targeted collaborations that generated **1.5 million views** while producing high-quality photo and video assets for Lippert's European content library.
-* **Website & Digital Touchpoints:** Collaborated with the web development team to launch a European **dealer locator**—making it easier for B2B and B2C audiences to find local partners—and supported a new blog section to strengthen organic content marketing.
+- **Website & Digital Touchpoints:** Collaborated with the marketing and web development teams to launch a European **dealer locator** and a new blog section, strengthening the website as a central touchpoint for brand discovery. These initiatives aimed to drive relevant traffic, increase brand recognition and reinforce Lippert’s rebranding across European markets.
 * **Employer Branding & C-Level LinkedIn Training:** Worked directly with executive stakeholders on employer branding campaigns and delivered tailored LinkedIn training to strengthen leadership visibility and internal communication capabilities.
 
 ---
