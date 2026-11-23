@@ -280,3 +280,12 @@ h5 {
   .hero-grid img { aspect-ratio: 3 / 4; border-radius: 4.5rem; object-fit: cover; }
   .proof-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
 }
+.reviews-grid { display: grid; gap: 1.5rem; grid-template-columns: 1fr; }
+.review-card { background: var(--gray-999_40); border: 1px solid var(--gray-800); border-top: 3px solid var(--accent-regular); border-radius: 1rem; padding: 1.75rem; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between; gap: 1.25rem; }
+.review-quote { color: var(--gray-200); line-height: 1.65; font-style: italic; }
+.review-author { border-top: 1px solid var(--gray-800); padding-top: 1rem; }
+.review-author strong { display: block; color: var(--gray-0); font-size: var(--text-md); }
+.review-author span { display: block; color: var(--gray-400); font-size: var(--text-sm); margin-top: 0.15rem; }
+@media (min-width: 50em) {
+  .reviews-grid { grid-template-columns: repeat(3, 1fr); gap: 1.75rem; }
+}
