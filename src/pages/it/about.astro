@@ -1,1 +1,213 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ContactCTA from '../../components/ContactCTA.astro';
+import Hero from '../../components/Hero.astro';
+
+const pageTitle = 'Chi Sono | Ruth Lara Reyes — Stratega di Marketing e Comunicazione';
+const pageDescription = 'Stratega di comunicazione e marketing tra Firenze e il Chianti. Unisco rigore accademico, esperienza giornalistica e visione internazionale per aiutare PMI e professionisti a comunicare con chiarezza.';
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Ruth Lara Reyes",
+  "jobTitle": "Marketing & Communications Strategist",
+  "homeLocation": {
+    "@type": "Place",
+    "name": "Chianti, Toscana, Italia"
+  },
+  "alumniOf": [
+    {
+      "@type": "EducationalOrganization",
+      "name": "Dottorato di Ricerca in Cooperazione Internazionale (Italia)"
+    },
+    {
+      "@type": "EducationalOrganization",
+      "name": "Master in Scienze Sociali e Comunicazione (Summa Cum Laude)"
+    }
+  ],
+  "knowsLanguage": ["Italian", "English", "Spanish"],
+  "sameAs": [
+    "https://linkedin.com"
+  ]
+};
+---
+
+<BaseLayout lang="it" title={pageTitle} description={pageDescription}>
+  <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
+
+  <div class="stack gap-20">
+    <main class="wrapper about">
+      <Hero
+        title="Chi Sono"
+        tagline="La mente strategica al fianco di leader e imprese—unendo chiarezza giornalistica, rigore accademico ed esecuzione digitale concreta."
+      >
+        <img
+          width="1553"
+          height="873"
+          src="/assets/at-work.jpg"
+          alt="Ruth Lara Reyes al lavoro sulla strategia di comunicazione in Toscana"
+        />
+      </Hero>
+
+      <section class="aeo-summary">
+        <h2>In Sintesi</h2>
+        <p>
+          <strong>Ruth Lara Reyes</strong> è una consulente multilingue di marketing e comunicazione strategica che vive sulle <strong>colline del Chianti, vicino Firenze</strong>. Con una formazione nel giornalismo, un <strong>Master in Comunicazione (Summa Cum Laude)</strong> e un <strong>Dottorato di Ricerca in Cooperazione Internazionale</strong>, ha vissuto e lavorato tra America Latina, Europa e Medio Oriente—aiutando imprenditori, PMI e istituzioni a costruire posizionamento chiaro e sistemi di contenuti strutturati in <strong>italiano, inglese e spagnolo</strong>.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="section-title">Un Po’ di Me</h2>
+        <div class="content">
+          <p>
+            Quando guardavo la televisione nella stanza di mia nonna, seguivo il telegiornale insieme a lei. Quando restavo sola, provavo a ricreare quel telegiornale trasformandolo in un gioco di ruolo. Da figlia unica, passavo molto tempo da sola, giocando con il mio amico immaginario e a volte con il mio cane.
+          </p>
+          <p>
+            Quella bambina è cresciuta con il desiderio di studiare giornalismo. Insieme al suo amico immaginario, immaginava un lavoro accanto ai politici—in Ecuador politici ed elezioni cambiano molto rapidamente—per diventare la loro consulente strategica.
+          </p>
+          <p>
+            Non ho mai voluto stare sotto i riflettori o guidare in prima fila. Ho sempre desiderato essere la mente strategica dietro al leader, un po’ come Jobs e Wozniak, o Walt Disney e suo fratello Roy.
+          </p>
+          <p>
+            Oggi ho finalmente un nome per ciò che ho sempre voluto essere: <strong>una stratega</strong>. Ed è un lavoro che amo profondamente.
+          </p>
+          <p>
+            Fare strategia significa ricercare, unire i puntini e osservare ciò che sembra ovvio da prospettive diverse. Significa comprendere il quadro d’insieme, individuare opportunità e trasformare le intuizioni in una direzione chiara e concreta. Vuol dire dare senso alla complessità, fare le domande giuste e portare le idee dalla teoria all’esecuzione.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title">Tre Continenti e Nuovi Inizi</h2>
+        <div class="content">
+          <p>
+            Arrivare fin qui non è stato lineare. Il mio percorso professionale non è mai stato una linea retta.
+          </p>
+          <p>
+            Ho iniziato come giornalista in Ecuador, attratta dalle storie capaci di generare impatto. Da lì ho conseguito un <strong>Master in Comunicazione</strong> con il massimo dei voti (<strong>Summa Cum Laude</strong>), seguito da un <strong>Dottorato di Ricerca in Cooperazione Internazionale</strong> in Italia, spinta dal desiderio di continuare a fare ricerca e comprendere i processi globali.
+          </p>
+          <p>
+            Da allora ho vissuto e lavorato tra <strong>America Latina, Europa e Medio Oriente</strong>. Ho insegnato all’università in Ecuador, tenuto corsi sulla diversità e sulla comunicazione interculturale a Milano e lavorato come interprete e docente di spagnolo a Dubai. Ho vissuto anche nel Regno Unito prima di stabilirmi definitivamente in Italia nel 2019, sulle colline del Chianti in Toscana.
+          </p>
+          <p>
+            Cambiare Paese, diventare madre e ricostruire la mia carriera mi ha insegnato che l’adattabilità è una delle competenze più preziose che esistano. Ho ricominciato da zero, unendo il rigore accademico all’esperienza pratica nella strategia digitale e nel marketing.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title">Come Aiuto Oggi</h2>
+        <div class="content">
+          <p>
+            Oggi affianco professionisti e imprese che vogliono comunicare con maggiore chiarezza e intenzionalità, rafforzare la propria visibilità e reputazione e creare nuove opportunità di crescita.
+          </p>
+          <p>
+            Che si tratti di analizzare il pubblico, definire il giusto posizionamento, sviluppare una strategia di comunicazione o dare vita a una campagna, unisco ricerca, visione strategica ed esecuzione pratica per trasformare le sfide comunicative in passi concreti.
+          </p>
+          <p>
+            Lavoro in <strong>italiano, inglese e spagnolo</strong>, portando una prospettiva internazionale in ogni progetto—sia sul territorio tra Firenze e il Chianti, sia online con clienti in tutto il mondo.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title">Formazione e Competenze</h2>
+        <div class="content">
+          <ul>
+            <li><strong>Dottorato di Ricerca in Cooperazione Internazionale</strong> — Italia</li>
+            <li><strong>Master in Scienze Sociali e Comunicazione (Summa Cum Laude)</strong></li>
+            <li><strong>Esperienza nel Giornalismo e nella Docenza Universitaria</strong> — Ecuador, Italia (Milano e Toscana), Dubai e Regno Unito</li>
+            <li><strong>Lingue di lavoro:</strong> Italiano, Inglese e Spagnolo</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <ContactCTA />
+  </div>
+</BaseLayout>
+
+<style>
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+
+  img {
+    margin-top: 1.5rem;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-md);
+  }
+
+  .aeo-summary {
+    background: var(--gradient-subtle);
+    border: 1px solid var(--gray-800);
+    border-left: 4px solid var(--accent-regular);
+    border-radius: 1rem;
+    padding: 1.5rem 2rem;
+    box-shadow: var(--shadow-sm);
+    display: block;
+  }
+
+  .aeo-summary h2 {
+    font-size: var(--text-lg);
+    color: var(--gray-0);
+    margin-bottom: 0.5rem;
+  }
+
+  .aeo-summary p {
+    color: var(--gray-200);
+    line-height: 1.65;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: var(--gray-200);
+  }
+
+  .section-title {
+    grid-column-start: 1;
+    font-size: var(--text-xl);
+    color: var(--gray-0);
+  }
+
+  .content {
+    grid-column: 2 / 4;
+    display: flex;
+    flex-direction: column;
+    gap: 1.15rem;
+    line-height: 1.7;
+  }
+
+  .content ul {
+    padding-left: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  @media (min-width: 50em) {
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 60% 1fr;
+    }
+
+    .about > :global(:first-child),
+    .aeo-summary {
+      grid-column: 1 / 4;
+    }
+
+    section {
+      display: contents;
+      font-size: var(--text-lg);
+    }
+
+    .aeo-summary {
+      display: block;
+    }
+  }
+</style>
 
