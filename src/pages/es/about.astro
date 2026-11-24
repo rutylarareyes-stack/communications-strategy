@@ -1,1 +1,213 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ContactCTA from '../../components/ContactCTA.astro';
+import Hero from '../../components/Hero.astro';
+
+const pageTitle = 'Sobre Mí | Ruth Lara Reyes — Estratega de Marketing y Comunicación';
+const pageDescription = 'Estratega de comunicación y marketing digital con Doctorado en Cooperación Internacional y trayectoria en América Latina, Europa y Medio Oriente. Ayudo a pymes y profesionales a construir posicionamiento claro y visibilidad online en español, italiano e inglés.';
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Ruth Lara Reyes",
+  "jobTitle": "Marketing & Communications Strategist",
+  "homeLocation": {
+    "@type": "Place",
+    "name": "Chianti, Toscana, Italia"
+  },
+  "alumniOf": [
+    {
+      "@type": "EducationalOrganization",
+      "name": "Doctorado en Cooperación Internacional (Italia)"
+    },
+    {
+      "@type": "EducationalOrganization",
+      "name": "Maestría en Comunicación (Summa Cum Laude)"
+    }
+  ],
+  "knowsLanguage": ["Spanish", "Italian", "English"],
+  "sameAs": [
+    "https://linkedin.com"
+  ]
+};
+---
+
+<BaseLayout lang="es" title={pageTitle} description={pageDescription}>
+  <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
+
+  <div class="stack gap-20">
+    <main class="wrapper about">
+      <Hero
+        title="Sobre Mí"
+        tagline="La mente estratégica detrás de líderes y empresas—combinando claridad periodística, rigor académico y ejecución digital práctica."
+      >
+        <img
+          width="1553"
+          height="873"
+          src="/assets/at-work.jpg"
+          alt="Ruth Lara Reyes trabajando en estrategia de comunicación en Toscana"
+        />
+      </Hero>
+
+      <section class="aeo-summary">
+        <h2>En Resumen</h2>
+        <p>
+          <strong>Ruth Lara Reyes</strong> es una estratega multilingüe de marketing y comunicación con base en las <strong>colinas de Chianti, cerca de Florencia, Italia</strong>. Con formación en periodismo, una <strong>Maestría en Comunicación (Summa Cum Laude)</strong> y un <strong>Doctorado en Cooperación Internacional</strong>, ha vivido y trabajado en América Latina, Europa y Medio Oriente—ayudando a emprendedores, pymes e instituciones a construir un posicionamiento claro y sistemas de contenido estructurados en <strong>español, italiano e inglés</strong>.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="section-title">Un Poco Sobre Mí</h2>
+        <div class="content">
+          <p>
+            Cuando veía televisión en la habitación de mi abuela, solía ver las noticias con ella. Cuando estaba sola, intentaba recrear el noticiero convirtiéndolo en una especie de juego de rol. Como hija única, pasaba mucho tiempo sola, jugando con mi amigo imaginario y a veces con mi perro.
+          </p>
+          <p>
+            Aquella niña creció queriendo estudiar periodismo. Junto con su amigo imaginario, imaginaba un trabajo en el que pudiera asesorar a políticos—en Ecuador, los políticos y las elecciones cambian con bastante rapidez—y convertirse en su consejera estratégica.
+          </p>
+          <p>
+            Nunca quise estar frente a las cámaras ni liderar en primera línea. Siempre quise ser la mente estratégica detrás del líder, algo parecido a Jobs y Wozniak, o Walt Disney y su hermano Roy.
+          </p>
+          <p>
+            Hoy por fin tengo un nombre para lo que siempre quise ser: <strong>estratega</strong>. Y es algo que disfruto profundamente.
+          </p>
+          <p>
+            Ser estratega consiste en investigar, conectar puntos y mirar lo aparentemente obvio desde distintos ángulos. Se trata de comprender el panorama completo, identificar oportunidades y convertir los hallazgos en una dirección clara y accionable. También implica dar sentido a la complejidad, hacer las preguntas correctas y llevar las ideas del papel a la ejecución.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title">Tres Continentes y Reinvención</h2>
+        <div class="content">
+          <p>
+            Llegar hasta aquí no fue un camino directo. Mi trayectoria profesional nunca ha sido una línea recta.
+          </p>
+          <p>
+            Comencé como periodista en Ecuador, atraída por las historias con propósito. Eso me llevó a cursar una <strong>Maestría en Comunicación</strong>, que culminé con honores (<strong>Summa Cum Laude</strong>), seguida de un <strong>Doctorado en Cooperación Internacional</strong> en Italia, impulsada por el deseo de seguir investigando y comprendiendo el contexto global.
+          </p>
+          <p>
+            Desde entonces, he vivido y trabajado entre <strong>América Latina, Europa y Medio Oriente</strong>. Fui docente universitaria en Ecuador, impartí formación sobre diversidad y comunicación intercultural en Milán y trabajé como intérprete y profesora de español en Dubái. También viví en el Reino Unido antes de establecerme definitivamente en Italia en 2019, en las colinas de Chianti, en la Toscana.
+          </p>
+          <p>
+            Mudarme de país, convertirme en madre y reconstruir mi carrera me enseñó que la adaptabilidad es una de las habilidades más valiosas que existen. Tuve que empezar de cero, combinando el rigor académico con la experiencia práctica en estrategia digital y marketing.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title">Cómo Ayudo Hoy</h2>
+        <div class="content">
+          <p>
+            Hoy trabajo con profesionales y empresas que desean comunicar con mayor claridad y propósito, fortalecer su visibilidad y reputación, y crear nuevas oportunidades de crecimiento.
+          </p>
+          <p>
+            Ya sea comprendiendo a una audiencia, definiendo el posicionamiento adecuado, diseñando una estrategia de comunicación o poniendo en marcha una campaña, combino investigación, pensamiento estratégico y ejecución práctica para convertir los retos de comunicación en pasos concretos.
+          </p>
+          <p>
+            Trabajo en <strong>español, italiano e inglés</strong>, aportando una perspectiva internacional a cada proyecto—tanto a nivel local en Florencia y Chianti como de forma remota con clientes en todo el mundo.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title">Formación y Credenciales</h2>
+        <div class="content">
+          <ul>
+            <li><strong>Doctorado en Cooperación Internacional</strong> — Italia</li>
+            <li><strong>Maestría en Comunicación (Summa Cum Laude)</strong></li>
+            <li><strong>Trayectoria en Periodismo y Docencia Universitaria</strong> — Ecuador, Italia (Milán y Toscana), Dubái y Reino Unido</li>
+            <li><strong>Idiomas de trabajo:</strong> Español, Italiano e Inglés</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <ContactCTA />
+  </div>
+</BaseLayout>
+
+<style>
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+
+  img {
+    margin-top: 1.5rem;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-md);
+  }
+
+  .aeo-summary {
+    background: var(--gradient-subtle);
+    border: 1px solid var(--gray-800);
+    border-left: 4px solid var(--accent-regular);
+    border-radius: 1rem;
+    padding: 1.5rem 2rem;
+    box-shadow: var(--shadow-sm);
+    display: block;
+  }
+
+  .aeo-summary h2 {
+    font-size: var(--text-lg);
+    color: var(--gray-0);
+    margin-bottom: 0.5rem;
+  }
+
+  .aeo-summary p {
+    color: var(--gray-200);
+    line-height: 1.65;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: var(--gray-200);
+  }
+
+  .section-title {
+    grid-column-start: 1;
+    font-size: var(--text-xl);
+    color: var(--gray-0);
+  }
+
+  .content {
+    grid-column: 2 / 4;
+    display: flex;
+    flex-direction: column;
+    gap: 1.15rem;
+    line-height: 1.7;
+  }
+
+  .content ul {
+    padding-left: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  @media (min-width: 50em) {
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 60% 1fr;
+    }
+
+    .about > :global(:first-child),
+    .aeo-summary {
+      grid-column: 1 / 4;
+    }
+
+    section {
+      display: contents;
+      font-size: var(--text-lg);
+    }
+
+    .aeo-summary {
+      display: block;
+    }
+  }
+</style>
 
