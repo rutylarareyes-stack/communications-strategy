@@ -289,3 +289,8 @@ h5 {
 @media (min-width: 50em) {
   .reviews-grid { grid-template-columns: repeat(3, 1fr); gap: 1.75rem; }
 }
+.media-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1.5rem 2.5rem; padding: 1.25rem 1.5rem; border-top: 1px solid var(--gray-800); border-bottom: 1px solid var(--gray-800); }
+.media-label { font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.12em; color: var(--gray-400); font-weight: 600; }
+.media-logos { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1.5rem 2.5rem; }
+.media-item { font-family: var(--font-brand); font-size: var(--text-xl); font-weight: 700; color: var(--gray-300); text-decoration: none; letter-spacing: -0.02em; transition: color 0.2s ease; }
+.media-item:hover { color: var(--accent-regular); }
