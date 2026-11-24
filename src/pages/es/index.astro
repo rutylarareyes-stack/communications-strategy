@@ -21,19 +21,19 @@ const bookingUrl = 'https://app.google';
 const pageFaqs = [
   {
     question: '¿Por qué muchas empresas y profesionales con talento son invisibles online?',
-    answer: 'La mayoría de las pymes y profesionales independientes dependen de una web desactualizada y publicaciones esporádicas en redes sociales sin un mensaje claro ni un sistema de contenidos replicable. Cuando tu posicionamiento es confuso, tanto los clientes potenciales como los buscadores tienen dificultades para entender por qué elegirte.'
+    answer: 'La mayoría de las pymes y profesionales independientes dependen de una web desactualizada y publicaciones esporádicas en redes sociales sin un mensaje claro ni un sistema de contenidos replicable.'
   },
   {
     question: '¿Qué ocurre durante la sesión estratégica de 45 minutos?',
-    answer: 'Revisamos tu presencia online actual, identificamos dónde tu mensaje pierde claridad o autoridad y trazamos los siguientes pasos prácticos en estrategia, gestión de redes sociales o formación de equipos.'
+    answer: 'Revisamos tu presencia online actual, identificamos dónde tu mensaje pierde claridad o autoridad y trazamos los siguientes pasos prácticos.'
   },
   {
     question: '¿Trabajas solo con empresas en Florencia y Chianti o también a nivel internacional?',
-    answer: 'Vivo en la zona de Florencia, en Italia, y trabajo tanto de forma local en la Toscana como online con emprendedores, pymes y profesionales de habla hispana e internacionales en español, italiano e inglés.'
+    answer: 'Trabajo de forma local en la Toscana y de manera online con clientes internacionales en español, italiano e inglés.'
   },
   {
     question: '¿Puedes formar a nuestro equipo interno en lugar de gestionarlo todo por nosotros?',
-    answer: 'Sí. Además de la consultoría estratégica y la gestión continua de redes sociales, imparto talleres y cursos a medida para equipos empresariales, profesionales e instituciones educativas para que puedan gestionar su sistema de contenidos de forma autónoma.'
+    answer: 'Sí, imparto talleres y cursos a medida para equipos y profesionales para que puedan gestionar su sistema de contenidos de forma autónoma.'
   }
 ];
 ---
@@ -44,7 +44,7 @@ const pageFaqs = [
       <header class="hero-grid">
         <Hero
           title="Eres Excelente en lo que Haces. Asegurémonos de que los Clientes te Encuentren."
-          tagline="Ayudo a emprendedores, pymes y profesionales independientes a transformar mensajes poco claros y publicaciones irregulares en un sistema de comunicación estructurado que genera confianza y atrae clientes."
+          tagline="Ayudo a emprendedores, pymes y profesionales independientes a transformar mensajes poco claros en un sistema de comunicación estructurado."
           align="start"
         >
           <div class="roles-row">
@@ -59,7 +59,7 @@ const pageFaqs = [
               <Icon icon="arrow-right" size="1.2em" />
             </CallToAction>
             <p>
-              <a href="#how-i-work">Descubre cómo trabajo &darr;</a> &middot; Mi enfoque en comunicación y marketing &middot; Florencia, Italia y Todo el Mundo &middot; ES / IT / EN
+              <a href="#how-i-work">Descubre cómo trabajo &darr;</a> &middot; Florencia, Italia y Todo el Mundo &middot; ES / IT / EN
             </p>
           </div>
         </Hero>
@@ -71,29 +71,15 @@ const pageFaqs = [
           src="/assets/portrait.jpg"
         />
       </header>
+
       <aside class="media-bar" aria-label="Entrevistas y apariciones en medios">
         <span class="media-label">En los Medios</span>
         <div class="media-logos">
-          <a
-            href="https://forbes.com.ec"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="media-item"
-            title="Lee la entrevista a Ruth Lara Reyes en Forbes Ecuador"
-          >
-            Forbes Ecuador
-          </a>
-          <a
-            href="https://donnemente.it"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="media-item"
-            title="Lee la entrevista a Ruth Lara Reyes en DonneMente"
-          >
-            DonneMente
-          </a>
+          <a href="https://forbes.com.ec" target="_blank" rel="noopener noreferrer" class="media-item">Forbes Ecuador</a>
+          <a href="https://donnemente.it" target="_blank" rel="noopener noreferrer" class="media-item">DonneMente</a>
         </div>
       </aside>
+
       <div id="how-i-work">
         <Skills />
       </div>
@@ -103,19 +89,19 @@ const pageFaqs = [
         <div class="proof-grid">
           <div class="proof-card">
             <h3>Rigor Académico, Enfoque Práctico</h3>
-            <p>Con el respaldo de un Doctorado y una Maestría Summa Cum Laude, cada marco de mensajes se construye sobre investigación real de audiencias—no suposiciones ni modas pasajeras.</p>
+            <p>Respaldo de Doctorado y Maestría Summa Cum Laude con investigación real de audiencias.</p>
           </div>
           <div class="proof-card">
             <h3>Educadora y Docente Universitaria</h3>
-            <p>La experiencia enseñando en universidades e instituciones formativas permite traducir sistemas complejos de marketing en pasos claros que tu equipo puede ejecutar.</p>
+            <p>Traducción de sistemas complejos de marketing en pasos claros para equipos.</p>
           </div>
           <div class="proof-card">
             <h3>Claridad Periodística</h3>
-            <p>Una base en periodismo garantiza que tu marca comunique con precisión, credibilidad e historias que captan atención genuina.</p>
+            <p>Comunicación con precisión, credibilidad e historias de alto impacto.</p>
           </div>
           <div class="proof-card">
             <h3>Tres Continentes, Tres Idiomas</h3>
-            <p>Fluidez intercultural en español, italiano e inglés para ayudar a negocios locales e internacionales a conectar sin fronteras.</p>
+            <p>Fluidez intercultural en español, italiano e inglés.</p>
           </div>
         </div>
       </section>
@@ -125,17 +111,15 @@ const pageFaqs = [
       <section class="stack gap-8">
         <header class="stack gap-2">
           <h3>Casos de Estudio y Proyectos Seleccionados</h3>
-          <p>Cómo un posicionamiento claro y sistemas de contenido estructurados convierten la experiencia en visibilidad medible.</p>
+          <p>Cómo un posicionamiento claro convierte la experiencia en visibilidad medible.</p>
         </header>
 
         <Grid variant="offset">
-          {
-            projects.map((project) => (
-              <li>
-                <PortfolioPreview project={project} />
-              </li>
-            ))
-          }
+          {projects.map((project) => (
+            <li>
+              <PortfolioPreview project={project} />
+            </li>
+          ))}
         </Grid>
 
         <div>
@@ -149,34 +133,26 @@ const pageFaqs = [
       <section class="stack gap-8" aria-labelledby="reviews-heading">
         <header class="stack gap-2">
           <h2 id="reviews-heading">Lo que Dicen Clientes y Líderes de Marketing</h2>
-          <p>Testimonios de directivos internacionales de marketing y profesionales independientes en EMEA, EE. UU. y Europa.</p>
+          <p>Testimonios de directivos internacionales y profesionales independientes.</p>
         </header>
 
         <div class="reviews-grid">
           <article class="review-card">
-            <p class="review-quote">
-              “Originally brought on for social media, Ruth quickly proved her expertise goes far beyond that. She’s a strategic thinker, a meticulous researcher, and an absolute pro at marketing and digital media—managing Lippert’s EMEA channels as well as Corporate and Marine channels for the US, shaping business strategies with her sharp analytical mindset.”
-            </p>
+            <p class="review-quote">“A strategic thinker, a meticulous researcher, and an absolute pro at marketing and digital media…”</p>
             <div class="review-author">
               <strong>Felicia Knutson</strong>
-              <span>Director of Creative &amp; Shared Services, Lippert </span>
+              <span>Director of Creative &amp; Shared Services, Lippert</span>
             </div>
           </article>
-
           <article class="review-card">
-            <p class="review-quote">
-              “Working with Ruth was a real turning point for my personal brand and LinkedIn presence. She helped me clarify my positioning, refine my messaging, and completely optimise my profile—plus practical tools like Canva templates, a clear content plan, and guidance on my landing page and Google Business Profile.”
-            </p>
+            <p class="review-quote">“Working with Ruth was a real turning point for my personal brand and LinkedIn presence.”</p>
             <div class="review-author">
               <strong>Kathryn Clairand</strong>
               <span>Business HR English Coach · France</span>
             </div>
           </article>
-
           <article class="review-card">
-            <p class="review-quote">
-              “Ruth is a strong, strategic marketer who consistently delivers with purpose and professionalism. She pairs determination with a relationship-forward approach that builds trust and drives results—showing up as a true partner to internal stakeholders and elevating everyone around her.”
-            </p>
+            <p class="review-quote">“Ruth is a strong, strategic marketer who consistently delivers with purpose and professionalism.”</p>
             <div class="review-author">
               <strong>Hannah Corn</strong>
               <span>VP of Marketing</span>
@@ -187,7 +163,25 @@ const pageFaqs = [
 
       <section class="story-teaser">
         <h2>De la Investigación a la Estrategia Internacional</h2>
-        <p>
-          Mi carrera comenzó en el periodismo, aprendiendo a encontrar la esencia de cada historia y comunicarla con claridad bajo presión. Con los años, mi trabajo y mi investigación académica me llevaron por tres continentes—culminando en un Doctorado, una Maestría Summa Cum Laude y una mudanza a Italia, donde reconstruí mi carrera desde cero. Hoy, desde la zona de Florencia, aplico ese mismo rigor investigativo y perspectiva intercultural para ayudar a emprendedores, pymes e instituciones a construir sistemas de comunicación duraderos.
-        </p>
+        <p>Trayectoria iniciada en el periodismo y consolidada con un Doctorado, una Maestría Summa Cum Laude y experiencia internacional en tres continentes. <a href="/es/about/">Lee mi historia completa &rarr;</a></p>
+      </section>
 
+      <section class="stack gap-4">
+        <header class="stack gap-2">
+          <h3>Preguntas Frecuentes</h3>
+          <p>Respuestas claras sobre cómo transformamos tu sistema de comunicación.</p>
+        </header>
+        <div class="stack gap-4">
+          {pageFaqs.map((faq) => (
+            <div class="faq-card">
+              <h4>{faq.question}</h4>
+              <p>{faq.answer}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    </main>
+
+    <ContactCTA />
+  </div>
+</BaseLayout>
