@@ -3,32 +3,64 @@ import Icon from './Icon.astro';
 import type { iconPaths } from './IconPaths';
 import ThemeToggle from './ThemeToggle.astro';
 
-/** Main menu items */
-const textLinks: { label: string; href: string }[] = [
-	{ label: 'Home', href: '/' },
-	{ label: 'Work', href: '/work/' },
-	{ label: 'About', href: '/about/' },
+interface Props {
+	lang?: 'en' | 'it' | 'es';
+}
+
+const { lang = 'en' } = Astro.props;
+
+const navMenus: Record<'en' | 'it' | 'es', { label: string; href: string }[]> = {
+	en: [
+		{ label: 'Home', href: '/' },
+		{ label: 'Work', href: '/work/' },
+		{ label: 'About', href: '/about/' },
+	],
+	it: [
+		{ label: 'Home', href: '/it/' },
+		{ label: 'Casi Studio', href: '/it/work/' },
+		{ label: 'Chi Sono', href: '/it/about/' },
+	],
+	es: [
+		{ label: 'Inicio', href: '/es/' },
+		{ label: 'Casos de Éxito', href: '/es/work/' },
+		{ label: 'Sobre Mí', href: '/es/about/' },
+	],
+};
+
+const textLinks = navMenus[lang];
+const homeHref = lang === 'en' ? '/' : `/${lang}/`;
+
+const pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, '');
+const normalizedPath = pathname.startsWith('/') ? pathname : `/${pathname}`;
+const cleanPath = normalizedPath.replace(/^\/(it|es)(?=\/|$)/, '') || '/';
+
+const langLinks: { code: 'en' | 'it' | 'es'; label: string; href: string }[] = [
+	{ code: 'en', label: 'EN', href: cleanPath },
+	{ code: 'it', label: 'IT', href: `/it${cleanPath === '/' ? '/' : cleanPath}` },
+	{ code: 'es', label: 'ES', href: `/es${cleanPath === '/' ? '/' : cleanPath}` },
 ];
-/** Icon links to social media — edit these with links to your profiles! */
+
+/** Icon links to social media */
 const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[] = [
-  {
-    label: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/ruth-lara-marketing-and-communications/',
-    icon: 'linkedin-logo',
-  },
+	{
+		label: 'LinkedIn',
+		href: 'https://www.linkedin.com/in/ruth-lara-marketing-and-communications/',
+		icon: 'linkedin-logo',
+	},
 ];
+
 /** Test if a link is pointing to the current page. */
 const isCurrentPage = (href: string) => {
-	let pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, '');
-	if (pathname.at(0) !== '/') pathname = '/' + pathname;
-	if (pathname.at(-1) !== '/') pathname += '/';
-	return pathname === href || (href !== '/' && pathname.startsWith(href));
+	let current = normalizedPath;
+	if (current.at(-1) !== '/') current += '/';
+	const isRoot = href === '/' || href === '/it/' || href === '/es/';
+	return current === href || (!isRoot && current.startsWith(href));
 };
 ---
 
 <nav>
 	<div class="menu-header">
-		<a href="/" class="site-title">
+		<a href={homeHref} class="site-title">
 			<Icon icon="terminal-window" color="var(--accent-regular)" size="1.6em" gradient />
 			Ruth Lara Reyes
 		</a>
@@ -75,6 +107,19 @@ const isCurrentPage = (href: string) => {
 			))}
 		</ul>
 		<div class="menu-footer">
+			<div class="lang-switcher" role="navigation" aria-label="Language switcher">
+				{langLinks.map(({ code, label, href }) => (
+					<a
+						href={href}
+						class="lang-link"
+						aria-current={lang === code ? 'true' : null}
+						hreflang={code}
+					>
+						{label}
+					</a>
+				))}
+			</div>
+
 			<div class="socials">
 				{iconLinks.map(({ href, icon, label }) => (
 					<a href={href} class="social">
@@ -220,11 +265,45 @@ const isCurrentPage = (href: string) => {
 
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 		gap: 0.75rem;
 		padding: 1.5rem 2rem 1.5rem 1.5rem;
 		background-color: var(--gray-999);
 		border-radius: 0 0 0.75rem 0.75rem;
 		box-shadow: var(--shadow-lg);
+	}
+
+	.lang-switcher {
+		display: flex;
+		align-items: center;
+		gap: 0.25rem;
+		padding: 0.25rem;
+		border-radius: 999rem;
+		background: var(--gray-999_40);
+		border: 1px solid var(--gray-800);
+	}
+
+	.lang-link {
+		padding: 0.25rem 0.55rem;
+		border-radius: 999rem;
+		font-size: var(--text-xs);
+		font-weight: 600;
+		color: var(--gray-300);
+		text-decoration: none;
+		transition:
+			color var(--theme-transition),
+			background-color var(--theme-transition);
+	}
+
+	.lang-link:hover,
+	.lang-link:focus {
+		color: var(--gray-0);
+		background-color: var(--accent-subtle-overlay);
+	}
+
+	.lang-link[aria-current='true'] {
+		color: var(--accent-text-over);
+		background-color: var(--accent-regular);
 	}
 
 	.socials {
@@ -336,7 +415,8 @@ const isCurrentPage = (href: string) => {
 		}
 	}
 	@media (forced-colors: active) {
-		.link[aria-current='page'] {
+		.link[aria-current='page'],
+		.lang-link[aria-current='true'] {
 			color: SelectedItem;
 		}
 	}
