@@ -12,8 +12,8 @@ tags:
 ---
 
 **Sector:** RV, Marine & Industrial Manufacturing (Italy & EMEA)  
-**Engagement Model:** Done For You (Hybrid Strategic & Execution Partner)  
-**Working Language:** English  
+**Engagement Model:** Done For You 
+**Working Language:** English, Italian  
 
 ### At a Glance: Measurable Impact
 
@@ -56,4 +56,4 @@ Initially joining as Social Media Specialist, I progressively expanded into a fu
 
 ### Key Takeaway
 
-A comprehensive brand transition requires far more than a new logo. It demands consistent, structured communication across channels, regional markets, and stakeholder relationships—combining strategic audience research with hands-on execution to turn post-merger complexity into unified brand recognition.
+A comprehensive brand transition requires far more than a new logo. It demands consistent, structured communication across channels, regional markets, and stakeholder relationships—combining strategic audience research with hands-on execution to turn post-merger complexity into unified brand recognition. For B2B and manufacturing SMEs that traditionally rely on trade shows and distributor networks, a structured digital and LinkedIn presence ensures international buyers and partners find a credible, unified brand all year round.
