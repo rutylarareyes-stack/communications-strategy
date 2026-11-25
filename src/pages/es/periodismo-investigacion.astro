@@ -1,1 +1,196 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ContactCTA from '../../components/ContactCTA.astro';
+import Hero from '../../components/Hero.astro';
+import Icon from '../../components/Icon.astro';
+import Pill from '../../components/Pill.astro';
+
+const pageTitle = 'Periodismo, Cooperación Internacional e Investigación | Ruth Lara Reyes, PhD';
+const pageDescription =
+	'Periodista freelance, redactora e investigadora con Doctorado (PhD) en Cooperación Internacional residente en Florencia, Italia. Disponible para reportajes internacionales, historias, investigación cualitativa, policy briefs y proyectos con ONG y universidades en español, inglés e italiano.';
+
+const schema = {
+	'@context': 'https://schema.org',
+	'@type': 'Person',
+	name: 'Ruth Lara Reyes',
+	honorificSuffix: 'PhD',
+	jobTitle: 'Periodista Freelance e Investigadora en Cooperación Internacional',
+	description: pageDescription,
+	sameAs: ['https://muckrack.com'],
+	knowsLanguage: ['Spanish', 'English', 'Italian'],
+	address: {
+		'@type': 'PostalAddress',
+		addressLocality: 'Florencia',
+		addressCountry: 'IT',
+	},
+};
+---
+
+<BaseLayout lang="es" title={pageTitle} description={pageDescription}>
+	<script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+	<div class="stack gap-20">
+		<div class="wrapper stack gap-8">
+			<Hero
+				title="Periodismo e Investigación en Cooperación Internacional"
+				tagline="Historias transfronterizas, investigación cualitativa y redacción editorial en español, inglés e italiano — respaldados por un Doctorado en Cooperación Internacional y trayectoria periodística."
+				align="start"
+			>
+				<div class="roles">
+					<Pill><Icon icon="pencil-line" size="1.33em" /> Periodismo Freelance e Historias</Pill>
+					<Pill><Icon icon="strategy" size="1.33em" /> Investigación en Cooperación Internacional</Pill>
+					<Pill><Icon icon="microphone-stage" size="1.33em" /> Policy Briefs y Crónicas</Pill>
+				</div>
+				<div class="muckrack-bar">
+					<a
+						href="https://muckrack.com"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="muckrack-link"
+					>
+						Lee Mis Historias Publicadas y Reportajes en Muck Rack →
+					</a>
+				</div>
+			</Hero>
+		</div>
+
+		<main class="wrapper stack gap-15">
+			<section class="section-grid">
+				<h2 class="section-title">Servicios Editoriales y de Investigación</h2>
+				<div class="content stack gap-6">
+					<div class="service-card">
+						<h3>1. Investigación en Cooperación Internacional, Migraciones y Desarrollo</h3>
+						<p>
+							Diseño de investigación cualitativa, entrevistas a actores clave, revisión bibliográfica
+							y análisis de campo con el respaldo de un <strong>Doctorado (PhD) en Cooperación
+							Internacional</strong>. Disponible para ONG, organismos internacionales, consorcios
+							europeos, universidades y fundaciones.
+						</p>
+					</div>
+
+					<div class="service-card">
+						<h3>2. Periodismo Freelance e Historias Transfronterizas</h3>
+						<p>
+							Artículos en profundidad, entrevistas y crónicas sociales y culturales escritos de forma
+							nativa en <strong>español</strong> y con fluidez en <strong>inglés</strong> e
+							<strong>italiano</strong>, cubriendo cooperación internacional, migración, diásporas,
+							educación y relaciones Europa–América Latina desde Italia.
+						</p>
+					</div>
+
+					<div class="service-card">
+						<h3>3. Policy Briefs, Informes de Proyecto y Publicaciones Institucionales</h3>
+						<p>
+							Síntesis de hallazgos empíricos, programas de cooperación e iniciativas multiactor en
+							policy briefs, libros blancos e informes ejecutivos multilingües listos para publicar
+							para organismos públicos, instituciones culturales y organizaciones sin fines de lucro.
+						</p>
+					</div>
+
+					<div class="service-card">
+						<h3>4. Producción en Terreno (Fixing), Entrevistas y Verificación en Italia</h3>
+						<p>
+							Apoyo periodístico y de investigación sobre el terreno en Florencia y toda Italia para
+							medios internacionales, equipos documentales e investigadores: localización de fuentes,
+							entrevistas trilingües y verificación contextual.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="section-grid">
+				<h2 class="section-title">Credenciales Académicas y Editoriales</h2>
+				<div class="content stack gap-4">
+					<p>
+						Mi trayectoria integra <strong>investigación doctoral en cooperación internacional</strong>,
+						<strong>periodismo</strong> y <strong>docencia universitaria en Ecuador</strong>, ayudando
+						a medios, ONG e instituciones a producir contenidos rigurosos y con sensibilidad intercultural.
+					</p>
+					<ul class="highlights">
+						<li><strong>Doctora (PhD) en Cooperación Internacional</strong> — especializada en dinámicas sociales transfronterizas, desarrollo y comunicación institucional.</li>
+						<li><strong>Periodista Verificada en Muck Rack</strong> — <a href="https://muckrack.com" target="_blank" rel="noopener noreferrer">://muckrack.com</a>.</li>
+						<li><strong>Ex Docente Universitaria</strong> — enseñanza de comunicación, análisis de medios y metodología de investigación.</li>
+						<li><strong>Capacidad Trilingüe</strong> — investigación, entrevistas y publicación en <strong>español, inglés e italiano</strong> desde Florencia, Italia.</li>
+					</ul>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.roles {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin-top: 0.5rem;
+	}
+
+	.muckrack-bar {
+		margin-top: 0.75rem;
+	}
+
+	.muckrack-link {
+		display: inline-block;
+		font-weight: 600;
+		color: var(--accent-regular);
+		text-decoration: underline;
+		text-underline-offset: 0.25em;
+	}
+
+	.section-grid {
+		display: grid;
+		gap: 1.5rem;
+	}
+
+	.section-title {
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		color: var(--gray-200);
+		font-size: var(--text-md);
+		line-height: 1.65;
+	}
+
+	.service-card {
+		padding: 1.5rem;
+		border: 1px solid var(--gray-800);
+		border-radius: 1rem;
+		background: var(--gradient-subtle);
+		box-shadow: var(--shadow-sm);
+	}
+
+	.service-card h3 {
+		font-size: var(--text-lg);
+		color: var(--gray-0);
+		margin-bottom: 0.5rem;
+	}
+
+	.highlights {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+		padding-left: 1.25rem;
+	}
+
+	.highlights a {
+		color: var(--accent-regular);
+		text-decoration: underline;
+	}
+
+	@media (min-width: 50em) {
+		.section-grid {
+			grid-template-columns: 1fr 2fr;
+			gap: 3rem;
+		}
+
+		.section-title {
+			font-size: var(--text-2xl);
+		}
+	}
+</style>
 
