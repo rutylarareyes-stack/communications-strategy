@@ -3,12 +3,32 @@ import CallToAction from './CallToAction.astro';
 import Icon from './Icon.astro';
 
 const bookingUrl = 'https://app.google';
+
+const pathname = Astro.url.pathname;
+const lang = pathname.startsWith('/it') ? 'it' : pathname.startsWith('/es') ? 'es' : 'en';
+
+const copy = {
+  en: {
+    heading: 'Ready to Make Your Expertise Easy to Find?',
+    cta: 'Book a 45-Minute Strategy Call',
+  },
+  it: {
+    heading: 'Pronto a Rendere Visibile il Tuo Valore Online?',
+    cta: 'Prenota una Sessione Strategica di 45 Minuti',
+  },
+  es: {
+    heading: '¿Listo para Hacer Visible tu Experiencia Online?',
+    cta: 'Reserva una Sesión Estratégica de 45 Minutos',
+  },
+} as const;
+
+const content = copy[lang];
 ---
 
 <aside>
-  <h2>Ready to Make Your Expertise Easy to Find?</h2>
+  <h2>{content.heading}</h2>
   <CallToAction href={bookingUrl}>
-    Book a 45-Minute Strategy Call
+    {content.cta}
     <Icon icon="paper-plane-tilt" size="1.2em" />
   </CallToAction>
 </aside>
