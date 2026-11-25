@@ -1,5 +1,5 @@
 ---
-title: Digital Marketing Training & Capacity Building for SMEs and Institutions
+title: Bespoke Training for Professionals and Organizations
 publishDate: 2026-01-20 00:00:00
 img: /assets/stock-3.jpg
 img_alt: Multilingual digital marketing, copywriting, and neuromarketing training for SMEs and institutions in Italy
