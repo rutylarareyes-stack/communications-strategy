@@ -16,7 +16,6 @@ const schema = {
 	honorificSuffix: 'PhD',
 	jobTitle: 'Freelance Journalist & International Cooperation Researcher',
 	description: pageDescription,
-	sameAs: ['https://muckrack.com'],
 	knowsLanguage: ['English', 'Italian', 'Spanish'],
 	address: {
 		'@type': 'PostalAddress',
@@ -33,33 +32,23 @@ const schema = {
 		<div class="wrapper stack gap-8">
 			<Hero
 				title="Journalism & International Cooperation Research"
-				tagline="Cross-border stories, qualitative research, and policy analysis in English, Italian, and Spanish — grounded in a PhD in International Cooperation and international journalism experience."
+				tagline="Cross-border stories and qualitative research in English, Italian, and Spanish — grounded in a PhD in International Cooperation and international journalism experience."
 				align="start"
 			>
 				<div class="roles">
-					<Pill><Icon icon="pencil-line" size="1.33em" /> Freelance Journalism & Stories</Pill>
+					<Pill><Icon icon="pencil-line" size="1.33em" /> Freelance Journalism &amp; Stories</Pill>
 					<Pill><Icon icon="strategy" size="1.33em" /> International Cooperation Research</Pill>
-					<Pill><Icon icon="microphone-stage" size="1.33em" /> Policy Briefs & Field Reporting</Pill>
-				</div>
-				<div class="muckrack-bar">
-					<a
-						href="https://muckrack.com"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="muckrack-link"
-					>
-						Read My Published Stories & Reporting on Muck Rack →
-					</a>
+					<Pill><Icon icon="microphone-stage" size="1.33em" /> Policy Briefs &amp; Field Reporting</Pill>
 				</div>
 			</Hero>
 		</div>
 
 		<main class="wrapper stack gap-15">
 			<section class="section-grid">
-				<h2 class="section-title">Editorial & Research Services</h2>
+				<h2 class="section-title">Editorial &amp; Research Services</h2>
 				<div class="content stack gap-6">
 					<div class="service-card">
-						<h3>1. International Cooperation, Migration & Development Research</h3>
+						<h3>1. International Cooperation, Migration &amp; Development Research</h3>
 						<p>
 							Qualitative research design, stakeholder interviews, literature reviews, and field
 							assessments backed by a <strong>PhD in International Cooperation</strong>. Available for
@@ -69,7 +58,7 @@ const schema = {
 					</div>
 
 					<div class="service-card">
-						<h3>2. Freelance Journalism & Cross-Border Stories</h3>
+						<h3>2. Freelance Journalism &amp; Cross-Border Stories</h3>
 						<p>
 							In-depth articles, interviews, and human-interest reporting written natively in
 							<strong>Spanish</strong> and fluently in <strong>English</strong> and
@@ -79,7 +68,7 @@ const schema = {
 					</div>
 
 					<div class="service-card">
-						<h3>3. Policy Briefs, Project Reports & Institutional Publications</h3>
+						<h3>3. Policy Briefs, Project Reports &amp; Institutional Publications</h3>
 						<p>
 							Translating complex research findings, cooperation programs, and multi-stakeholder
 							initiatives into clear, publication-ready policy briefs, white papers, and executive
@@ -88,7 +77,7 @@ const schema = {
 					</div>
 
 					<div class="service-card">
-						<h3>4. Field Fixing, Bilingual Interviewing & Fact-Checking in Italy</h3>
+						<h3>4. Field Fixing, Bilingual Interviewing &amp; Fact-Checking in Italy</h3>
 						<p>
 							On-the-ground research and editorial support in Florence and across Italy for
 							international newsrooms, documentary teams, and academic researchers—including source
@@ -99,7 +88,7 @@ const schema = {
 			</section>
 
 			<section class="section-grid">
-				<h2 class="section-title">Academic & Editorial Credentials</h2>
+				<h2 class="section-title">Academic &amp; Editorial Credentials</h2>
 				<div class="content stack gap-4">
 					<p>
 						My work bridges <strong>academic research in international cooperation</strong>,
@@ -109,7 +98,7 @@ const schema = {
 					</p>
 					<ul class="highlights">
 						<li><strong>PhD in International Cooperation</strong> — specialized in cross-border social dynamics, development, and institutional communication.</li>
-                        <li><strong>Verified Journalist on Muck Rack</strong> — <a href="https://muckrack.com" target="_blank" rel="noopener noreferrer">View profile on Muck Rack</a>.</li>
+						<li><strong>Published Journalist &amp; Editorial Writer</strong> — experienced in investigative reporting, interviews, and international features across Europe and Latin America.</li>
 						<li><strong>Former University Lecturer</strong> — teaching communication, media analysis, and research methodology.</li>
 						<li><strong>Trilingual Execution</strong> — full research, interviewing, and publication in <strong>English, Italian, and Spanish</strong> from Florence, Italy.</li>
 					</ul>
@@ -127,18 +116,6 @@ const schema = {
 		flex-wrap: wrap;
 		gap: 0.5rem;
 		margin-top: 0.5rem;
-	}
-
-	.muckrack-bar {
-		margin-top: 0.75rem;
-	}
-
-	.muckrack-link {
-		display: inline-block;
-		font-weight: 600;
-		color: var(--accent-regular);
-		text-decoration: underline;
-		text-underline-offset: 0.25em;
 	}
 
 	.section-grid {
@@ -178,11 +155,6 @@ const schema = {
 		padding-left: 1.25rem;
 	}
 
-	.highlights a {
-		color: var(--accent-regular);
-		text-decoration: underline;
-	}
-
 	@media (min-width: 50em) {
 		.section-grid {
 			grid-template-columns: 1fr 2fr;
@@ -194,4 +166,3 @@ const schema = {
 		}
 	}
 </style>
-
