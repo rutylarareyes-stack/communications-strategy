@@ -1,8 +1,8 @@
 ---
-title: Comunicazione B2B Integrata e Riposizionamento del Brand
+title: "Comunicazione B2B Integrata e Riposizionamento del Brand"
 publishDate: 2026-03-01 00:00:00
 img: /assets/stock-1.jpg
-img_alt: Strategia di comunicazione B2B e manifatturiera industriale nell'area EMEA
+img_alt: "Strategia di comunicazione B2B e manifatturiera industriale nell'area EMEA"
 description: |
   Consolidamento dell’identità di brand e crescita organica annua del 60% della community nell’area EMEA dopo nove acquisizioni europee per il leader manifatturiero statunitense Lippert.
 tags:
