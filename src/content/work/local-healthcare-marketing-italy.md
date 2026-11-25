@@ -1,5 +1,5 @@
 ---
-title: Local Healthcare Marketing & Digital Reputation
+title: Local Marketing & Digital Reputation
 publishDate: 2026-02-15 00:00:00
 img: /assets/stock-2.jpg
 img_alt: Local healthcare marketing and Google Business Profile optimization in Emilia-Romagna, Italy
