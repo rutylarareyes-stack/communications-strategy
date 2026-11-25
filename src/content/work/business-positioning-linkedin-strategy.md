@@ -1,5 +1,5 @@
 ---
-title: Business Positioning, Offer Strategy & LinkedIn Personal Branding
+title: Business Positioning & Personal Branding
 publishDate: 2026-01-10 00:00:00
 img: /assets/stock-4.jpg
 img_alt: Business positioning, pricing strategy, and LinkedIn personal branding for entrepreneurs in Florence and internationally
