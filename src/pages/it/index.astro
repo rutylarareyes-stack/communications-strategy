@@ -1,1 +1,187 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CallToAction from '../../components/CallToAction.astro';
+import Grid from '../../components/Grid.astro';
+import Hero from '../../components/Hero.astro';
+import Icon from '../../components/Icon.astro';
+import Pill from '../../components/Pill.astro';
+import PortfolioPreview from '../../components/PortfolioPreview.astro';
+import ContactCTA from '../../components/ContactCTA.astro';
+import Skills from '../../components/Skills.astro';
+
+const projects = (await getCollection('work'))
+  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
+  .slice(0, 4);
+
+const pageTitle = 'Ruth Lara Reyes | Strategia di Comunicazione e Sistemi di Contenuti per Aziende e Professionisti';
+const pageDescription = 'Trasforma le tue competenze in visibilità online chiara e autorevole. Strategia di comunicazione, posizionamento e formazione in italiano, inglese e spagnolo.';
+const bookingUrl = 'https://calendar.app.google/aC9rPWPAnMPtHYwV9';
+
+const pageFaqs = [
+  {
+    question: 'Perché molte aziende e professionisti validi risultano invisibili online?',
+    answer: 'La maggior parte delle PMI e dei professionisti si affida a un sito web datato e a pubblicazioni sporadiche sui social, senza un messaggio chiaro né un sistema editoriale replicabile. Quando il posizionamento è confuso, sia i potenziali clienti sia i motori di ricerca faticano a capire perché sceglierti.'
+  },
+  {
+    question: 'Cosa succede durante la sessione strategica di 45 minuti?',
+    answer: 'Analizziamo la tua attuale presenza online, individuiamo dove il tuo messaggio perde chiarezza o autorevolezza e definiamo i prossimi passi concreti tra strategia, gestione dei canali social o formazione del team.'
+  },
+  {
+    question: 'Lavori solo con aziende locali o anche a livello internazionale?',
+    answer: 'Lavoro sia sul territorio (Firenze, Chianti) sia online con imprenditori, PMI e professionisti in Italia e all’estero, in italiano, inglese e spagnolo.'
+  },
+  {
+    question: 'Puoi formare il nostro team interno invece di gestire tutto al posto nostro?',
+    answer: 'Sì. Oltre alla consulenza strategica e alla gestione continuativa della comunicazione digitale, progetto workshop e corsi su misura per team aziendali, professionisti ed enti formativi affinché possano gestire in autonomia il proprio sistema di comunicazione.'
+  }
+];
+---
+
+<BaseLayout lang="it" title={pageTitle} description={pageDescription} faqs={pageFaqs}>
+  <div class="stack gap-20 lg:gap-48">
+    <div class="wrapper stack gap-8 lg:gap-20">
+      <header class="hero-grid">
+        <Hero
+          title="Sai fare bene il tuo lavoro. Assicuriamoci che i clienti ti trovino."
+          tagline="Aiuto imprenditori, PMI e professionisti a trasformare messaggi poco chiari e pubblicazioni irregolari in un sistema di comunicazione strutturato che costruisce fiducia e attrae clienti."
+          align="start"
+        >
+          <div class="roles-row">
+            <Pill><Icon icon="strategy" size="1.33em" /> Strategia di Comunicazione</Pill>
+            <Pill><Icon icon="microphone-stage" size="1.33em" /> Social Media Marketing</Pill>
+            <Pill><Icon icon="pencil-line" size="1.33em" /> Formazione</Pill>
+          </div>
+
+          <div class="hero-actions">
+            <CallToAction href={bookingUrl}>
+              Prenota una sessione gratuita di 45 minuti
+              <Icon icon="arrow-right" size="1.2em" />
+            </CallToAction>
+            <p>
+              <a href="#how-i-work">Scopri come lavoro &darr;</a> &middot; Il mio approccio a comunicazione e marketing &middot; Firenze, Italia e Tutto il Mondo &middot; IT - EN - ES
+            </p>
+          </div>
+        </Hero>
+
+        <img
+          alt="Ruth Lara Reyes — Stratega di Marketing e Comunicazione"
+          width="480"
+          height="620"
+          src="/assets/portrait.jpg"
+        />
+      </header>
+
+      <aside class="media-bar" aria-label="Interviste e rassegna stampa">
+        <span class="media-label">Dicono di Me</span>
+        <div class="media-logos">
+          <a
+            href="https://forbes.com.ec"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="media-item"
+            title="Leggi l'intervista a Ruth Lara Reyes su Forbes Ecuador"
+          >
+            Forbes Ecuador
+          </a>
+          <a
+            href="https://donnemente.it"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="media-item"
+            title="Leggi l'intervista a Ruth Lara Reyes su DonneMente"
+          >
+            DonneMente
+          </a>
+        </div>
+      </aside>
+
+      <div id="how-i-work"><Skills /></div>
+
+      <section class="stack gap-4">
+        <h2>Perché Lavorare Con Ruth</h2>
+        <div class="proof-grid">
+          <div class="proof-card">
+            <h3>Rigore Accademico, Taglio Pratico</h3>
+            <p>Strategie di posizionamento basate su ricerche reali del pubblico.</p>
+          </div>
+          <div class="proof-card">
+            <h3>Formatrice e Docente Universitaria</h3>
+            <p>Traduzione di sistemi complessi di marketing in passaggi applicabili per il team.</p>
+          </div>
+          <div class="proof-card">
+            <h3>Chiarezza Giornalistica</h3>
+            <p>Precisione, credibilità e storytelling d'impatto per il tuo brand.</p>
+          </div>
+          <div class="proof-card">
+            <h3>Tre Continenti, Tre Lingue</h3>
+            <p>Competenza interculturale in italiano, inglese e spagnolo.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <main class="wrapper stack gap-20 lg:gap-48">
+      <section class="stack gap-8">
+        <header class="stack gap-2">
+          <h3>Progetti e Casi Studio Selezionati</h3>
+          <p>Come un posizionamento chiaro e sistemi editoriali trasformano le competenze in visibilità.</p>
+        </header>
+
+        <Grid variant="offset">
+          {projects.map((project) => (<li><PortfolioPreview project={project} /></li>))}
+        </Grid>
+
+        <div>
+          <CallToAction href="/it/work/">Vedi tutti i casi studio <Icon icon="arrow-right" size="1.2em" /></CallToAction>
+        </div>
+      </section>
+
+      <section class="stack gap-8" aria-labelledby="reviews-heading">
+        <header class="stack gap-2">
+          <h2 id="reviews-heading">Cosa Dicono Clienti e Leader di Marketing</h2>
+          <p>Testimonianze di direttori marketing internazionali e professionisti indipendenti.</p>
+        </header>
+
+        <div class="reviews-grid">
+          <article class="review-card">
+            <p class="review-quote">
+              “Originally brought on for social media, Ruth quickly proved her expertise goes far beyond that. She’s a strategic thinker, a meticulous researcher, and an absolute pro at marketing and digital media—managing Lippert’s EMEA channels as well as Corporate and Marine channels for the US, shaping business strategies with her sharp analytical mindset.”
+            </p>
+            <div class="review-author"><strong>Felicia Knutson</strong><span>Director of Creative &amp; Shared Services, Lippert</span></div>
+          </article>
+          <article class="review-card">
+            <p class="review-quote">
+              “Working with Ruth was a real turning point for my personal brand and LinkedIn presence. She helped me clarify my positioning, refine my messaging, and completely optimise my profile—plus practical tools like Canva templates, a clear content plan, and guidance on my landing page and Google Business Profile.”
+            </p>
+            <div class="review-author"><strong>Kathryn Clairand</strong><span>Business HR English Coach · France</span></div>
+          </article>
+          <article class="review-card">
+            <p class="review-quote">
+              “Ruth is a strong, strategic marketer who consistently delivers with purpose and professionalism. She pairs determination with a relationship-forward approach that builds trust and drives results—showing up as a true partner to internal stakeholders and elevating everyone around her.”
+            </p>
+            <div class="review-author"><strong>Hannah Corn</strong><span>VP of Marketing</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="story-teaser">
+        <h2>Dalla Ricerca alla Strategia Internazionale</h2>
+        <p>Giornalismo, Dottorato di Ricerca e Master Summa Cum Laude portati nell'area di Firenze per supportare PMI e brand internazionali con una visione strategica solida. <a href="/it/about/">Leggi la mia storia completa &rarr;</a></p>
+      </section>
+
+      <section class="stack gap-4">
+        <header class="stack gap-2">
+          <h3>Domande Frequenti</h3>
+          <p>Risposte chiare su come trasformiamo le tue competenze in un sistema di comunicazione efficace.</p>
+        </header>
+        <div class="stack gap-4">
+          {pageFaqs.map((faq) => (<div class="faq-card"><h4>{faq.question}</h4><p>{faq.answer}</p></div>))}
+        </div>
+      </section>
+    </main>
+
+    <ContactCTA />
+  </div>
+</BaseLayout>
 
