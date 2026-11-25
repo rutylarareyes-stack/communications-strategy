@@ -1,1 +1,196 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ContactCTA from '../../components/ContactCTA.astro';
+import Hero from '../../components/Hero.astro';
+import Icon from '../../components/Icon.astro';
+import Pill from '../../components/Pill.astro';
+
+const pageTitle = 'Giornalismo, Cooperazione Internazionale e Ricerca | Ruth Lara Reyes, PhD';
+const pageDescription =
+	'Giornalista freelance, redattrice e ricercatrice con Dottorato di Ricerca (PhD) in Cooperazione Internazionale a Firenze. Disponibile per reportage, storie, ricerca qualitativa, policy brief e progetti ONG/accademici in italiano, inglese e spagnolo.';
+
+const schema = {
+	'@context': 'https://schema.org',
+	'@type': 'Person',
+	name: 'Ruth Lara Reyes',
+	honorificSuffix: 'PhD',
+	jobTitle: 'Giornalista Freelance e Ricercatrice in Cooperazione Internazionale',
+	description: pageDescription,
+	sameAs: ['https://muckrack.com'],
+	knowsLanguage: ['Italian', 'English', 'Spanish'],
+	address: {
+		'@type': 'PostalAddress',
+		addressLocality: 'Firenze',
+		addressCountry: 'IT',
+	},
+};
+---
+
+<BaseLayout lang="it" title={pageTitle} description={pageDescription}>
+	<script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+	<div class="stack gap-20">
+		<div class="wrapper stack gap-8">
+			<Hero
+				title="Giornalismo e Ricerca in Cooperazione Internazionale"
+				tagline="Storie transfrontaliere, ricerca qualitativa e scrittura editoriale in italiano, inglese e spagnolo — con un Dottorato in Cooperazione Internazionale ed esperienza giornalistica internazionale."
+				align="start"
+			>
+				<div class="roles">
+					<Pill><Icon icon="pencil-line" size="1.33em" /> Giornalismo Freelance e Storie</Pill>
+					<Pill><Icon icon="strategy" size="1.33em" /> Ricerca in Cooperazione Internazionale</Pill>
+					<Pill><Icon icon="microphone-stage" size="1.33em" /> Policy Brief e Interviste</Pill>
+				</div>
+				<div class="muckrack-bar">
+					<a
+						href="https://muckrack.com"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="muckrack-link"
+					>
+						Leggi le Mie Storie Pubblicate e i Reportage su Muck Rack →
+					</a>
+				</div>
+			</Hero>
+		</div>
+
+		<main class="wrapper stack gap-15">
+			<section class="section-grid">
+				<h2 class="section-title">Servizi Editoriali e di Ricerca</h2>
+				<div class="content stack gap-6">
+					<div class="service-card">
+						<h3>1. Ricerca su Cooperazione Internazionale, Migrazioni e Sviluppo</h3>
+						<p>
+							Progettazione di ricerche qualitative, interviste agli stakeholder, analisi della
+							letteratura e valutazioni sul campo supportate da un <strong>Dottorato di Ricerca (PhD)
+							in Cooperazione Internazionale</strong>. Collaborazioni con ONG, organizzazioni
+							internazionali, consorzi europei, università e fondazioni.
+						</p>
+					</div>
+
+					<div class="service-card">
+						<h3>2. Giornalismo Freelance e Storie Internazionali</h3>
+						<p>
+							Articoli di approfondimento, interviste e reportage sociali e culturali redatti in
+							<strong>spagnolo (madrelingua)</strong>, <strong>italiano</strong> e
+							<strong>inglese</strong>, con focus su cooperazione internazionale, migrazioni,
+							diaspore, educazione e relazioni tra Europa e America Latina.
+						</p>
+					</div>
+
+					<div class="service-card">
+						<h3>3. Policy Brief, Report di Progetto e Pubblicazioni Istituzionali</h3>
+						<p>
+							Sintesi di risultati di ricerca, programmi di cooperazione e progetti multi-stakeholder
+							in policy brief, white paper e dossier editoriali multilingue pronti per la
+							pubblicazione per enti pubblici, istituzioni culturali e terzo settore.
+						</p>
+					</div>
+
+					<div class="service-card">
+						<h3>4. Field Fixing, Interviste Bilingue e Fact-Checking in Italia</h3>
+						<p>
+							Supporto giornalistico e di ricerca sul campo a Firenze e in tutta Italia per redazioni
+							internazionali, documentaristi e ricercatori: individuazione delle fonti, interviste
+							trilingue e verifica contestuale.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="section-grid">
+				<h2 class="section-title">Profilo Accademico ed Editoriale</h2>
+				<div class="content stack gap-4">
+					<p>
+						Il mio percorso unisce <strong>ricerca accademica nella cooperazione internazionale</strong>,
+						<strong>giornalismo</strong> e <strong>docenza universitaria in Ecuador</strong>, offrendo
+						ad aziende editoriali, ONG e istituti di ricerca analisi rigorose e narrazioni chiare.
+					</p>
+					<ul class="highlights">
+						<li><strong>Dottorato di Ricerca (PhD) in Cooperazione Internazionale</strong> — focus su dinamiche sociali transnazionali, sviluppo e comunicazione istituzionale.</li>
+						<li><strong>Giornalista Verificata su Muck Rack</strong> — <a href="https://muckrack.com" target="_blank" rel="noopener noreferrer">://muckrack.com</a>.</li>
+						<li><strong>Ex Docente Universitaria</strong> — insegnamento di comunicazione, analisi dei media e metodologia della ricerca.</li>
+						<li><strong>Operatività Trilingue</strong> — ricerca, interviste e scrittura in <strong>italiano, inglese e spagnolo</strong> da Firenze.</li>
+					</ul>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.roles {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin-top: 0.5rem;
+	}
+
+	.muckrack-bar {
+		margin-top: 0.75rem;
+	}
+
+	.muckrack-link {
+		display: inline-block;
+		font-weight: 600;
+		color: var(--accent-regular);
+		text-decoration: underline;
+		text-underline-offset: 0.25em;
+	}
+
+	.section-grid {
+		display: grid;
+		gap: 1.5rem;
+	}
+
+	.section-title {
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		color: var(--gray-200);
+		font-size: var(--text-md);
+		line-height: 1.65;
+	}
+
+	.service-card {
+		padding: 1.5rem;
+		border: 1px solid var(--gray-800);
+		border-radius: 1rem;
+		background: var(--gradient-subtle);
+		box-shadow: var(--shadow-sm);
+	}
+
+	.service-card h3 {
+		font-size: var(--text-lg);
+		color: var(--gray-0);
+		margin-bottom: 0.5rem;
+	}
+
+	.highlights {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+		padding-left: 1.25rem;
+	}
+
+	.highlights a {
+		color: var(--accent-regular);
+		text-decoration: underline;
+	}
+
+	@media (min-width: 50em) {
+		.section-grid {
+			grid-template-columns: 1fr 2fr;
+			gap: 3rem;
+		}
+
+		.section-title {
+			font-size: var(--text-2xl);
+		}
+	}
+</style>
 
