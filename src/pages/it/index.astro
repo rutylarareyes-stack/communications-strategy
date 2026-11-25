@@ -10,9 +10,9 @@ import PortfolioPreview from '../../components/PortfolioPreview.astro';
 import ContactCTA from '../../components/ContactCTA.astro';
 import Skills from '../../components/Skills.astro';
 
-const projects = (await getCollection('work'))
-  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
-  .slice(0, 4);
+const projects = (await getCollection('work', ({ id }) => id.startsWith('it/')))
+	.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
+	.slice(0, 4);
 
 const pageTitle = 'Ruth Lara Reyes | Strategia di Comunicazione e Sistemi di Contenuti per Aziende e Professionisti';
 const pageDescription = 'Trasforma le tue competenze in visibilità online chiara e autorevole. Strategia di comunicazione, posizionamento e formazione in italiano, inglese e spagnolo.';
