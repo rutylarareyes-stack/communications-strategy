@@ -1,31 +1,101 @@
 ---
 import Icon from './Icon.astro';
+
+const pathname = Astro.url.pathname;
+const lang = pathname.startsWith('/it') ? 'it' : pathname.startsWith('/es') ? 'es' : 'en';
+
+const copy = {
+  en: {
+    heading: 'How We Can Work Together',
+    subheading: 'Choose the level of strategic support and execution that fits your business right now.',
+    cards: [
+      {
+        icon: 'strategy',
+        title: 'Done For You',
+        description:
+          'From strategy and planning to content creation and implementation, I manage the process and turn your business goals into a clear, consistent communication plan. You get dedicated strategic support and hands-on execution without the overhead of hiring an in-house team or the costs of a traditional agency.',
+      },
+      {
+        icon: 'handshake',
+        title: 'Done With You',
+        description:
+          'I work alongside you to understand your business, identify opportunities, refine your positioning, and make informed decisions. Together, we develop a clear communication strategy and a practical plan you can put into action, with my guidance throughout the process.',
+      },
+      {
+        icon: 'pencil-line',
+        title: 'Learn How',
+        description:
+          "Through tailored training and practical guidance, I help you develop the knowledge and skills to manage your communication independently. You'll learn how to use the right digital tools, plan effective content, communicate your value, and make more confident marketing decisions.",
+      },
+    ],
+  },
+  it: {
+    heading: 'Come Possiamo Lavorare Insieme',
+    subheading: 'Scegli il livello di supporto strategico e operativo più adatto alla tua attività in questo momento.',
+    cards: [
+      {
+        icon: 'strategy',
+        title: 'Fatto per Te',
+        description:
+          'Dalla strategia e pianificazione alla creazione e pubblicazione dei contenuti, gestisco l’intero processo trasformando i tuoi obiettivi di business in un piano di comunicazione chiaro e coerente. Ottieni un supporto strategico dedicato e un’esecuzione concreta, senza i costi fissi di un team interno o di un’agenzia tradizionale.',
+      },
+      {
+        icon: 'handshake',
+        title: 'Fatto con Te',
+        description:
+          'Lavoro al tuo fianco per comprendere la tua realtà, individuare opportunità, affinare il posizionamento e prendere decisioni consapevoli. Insieme definiamo una strategia di comunicazione chiara e un piano operativo concreto da mettere in pratica, con la mia guida in ogni fase del percorso.',
+      },
+      {
+        icon: 'pencil-line',
+        title: 'Impara Come Farlo',
+        description:
+          'Attraverso percorsi di formazione su misura e un affiancamento pratico, ti aiuto a sviluppare le conoscenze e le competenze per gestire la tua comunicazione in autonomia. Imparerai a usare gli strumenti digitali più adatti, pianificare contenuti efficaci, comunicare il tuo valore e prendere decisioni di marketing con maggiore sicurezza.',
+      },
+    ],
+  },
+  es: {
+    heading: 'Cómo Podemos Trabajar Juntos',
+    subheading: 'Elige el nivel de apoyo estratégico y ejecución que mejor se adapta a tu negocio en este momento.',
+    cards: [
+      {
+        icon: 'strategy',
+        title: 'Hecho para Ti',
+        description:
+          'Desde la estrategia y la planificación hasta la creación e implementación de contenidos, gestiono todo el proceso y convierto tus objetivos de negocio en un plan de comunicación claro y coherente. Obtienes acompañamiento estratégico dedicado y ejecución práctica sin los costes fijos de contratar un equipo interno o una agencia tradicional.',
+      },
+      {
+        icon: 'handshake',
+        title: 'Hecho Contigo',
+        description:
+          'Trabajo a tu lado para comprender tu negocio, identificar oportunidades, afinar tu posicionamiento y tomar decisiones informadas. Juntos desarrollamos una estrategia de comunicación clara y un plan práctico que puedas poner en marcha, con mi guía durante todo el proceso.',
+      },
+      {
+        icon: 'pencil-line',
+        title: 'Aprende a Hacerlo',
+        description:
+          'A través de formación a medida y acompañamiento práctico, te ayudo a desarrollar los conocimientos y habilidades para gestionar tu comunicación de forma independiente. Aprenderás a utilizar las herramientas digitales adecuadas, planificar contenidos efectivos, comunicar tu valor y tomar decisiones de marketing con mayor confianza.',
+      },
+    ],
+  },
+} as const;
+
+const content = copy[lang];
 ---
 
 <section class="box skills-wrapper" aria-labelledby="work-together-heading">
   <header class="skills-header">
-    <h2 id="work-together-heading">How We Can Work Together</h2>
-    <p>Choose the level of strategic support and execution that fits your business right now.</p>
+    <h2 id="work-together-heading">{content.heading}</h2>
+    <p>{content.subheading}</p>
   </header>
 
   <div class="skills">
-    <div class="stack gap-2 lg:gap-4">
-      <Icon icon="strategy" color="var(--accent-regular)" size="2.5rem" gradient />
-      <h3>Done For You</h3>
-      <p>I take care of the strategy and execution, so you can focus on running your business.</p>
-    </div>
-
-    <div class="stack gap-2 lg:gap-4">
-      <Icon icon="handshake" color="var(--accent-regular)" size="2.5rem" gradient />
-      <h3>Done With You</h3>
-      <p>We work together to clarify your direction, make informed decisions, and put your strategy into action.</p>
-    </div>
-
-    <div class="stack gap-2 lg:gap-4">
-      <Icon icon="pencil-line" color="var(--accent-regular)" size="2.5rem" gradient />
-      <h3>Learn How</h3>
-      <p>I equip you with the knowledge, tools, and confidence to manage your communication independently.</p>
-    </div>
+    {content.cards.map((card) => (
+      <div class="stack gap-2 lg:gap-4">
+        <Icon icon={card.icon} color="var(--accent-regular)" size="2.5rem" gradient />
+        <h3>{card.title}</h3>
+        <p>{card.description}</p>
+      </div>
+    ))}
   </div>
 </section>
 
