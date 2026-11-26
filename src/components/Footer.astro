@@ -2,21 +2,36 @@
 import Icon from './Icon.astro';
 
 const currentYear = new Date().getFullYear();
+const pathname = Astro.url.pathname;
+
+const isItalian = pathname.startsWith('/it');
+const isSpanish = pathname.startsWith('/es');
+
+const privacyHref = isItalian ? '/it/privacy/' : isSpanish ? '/es/privacy/' : '/privacy/';
+const privacyLabel = isItalian
+	? 'Privacy e Cookie Policy'
+	: isSpanish
+		? 'Política de Privacidad y Cookies'
+		: 'Privacy & Cookie Policy';
 ---
 
 <footer>
 	<div class="group">
 		<p>
-			Designed & Developed in Portland with <a href="https://astro.build/">Astro</a>
+			Designed &amp; Developed in Florence with <a href="https://astro.build/">Astro</a>
 			<Icon icon="rocket-launch" size="1.2em" />
 		</p>
-		<p>&copy; {currentYear} Ruth Lara Reyes</p>
+		<p>&copy; {currentYear} Ruth Lara Reyes &middot; P.IVA 07431190482</p>
 	</div>
 	<p class="socials">
-		<a href="https://www.linkedin.com/in/ruth-lara-marketing-and-communications/"> LinkedIn</a> 
-		
+		<a href={privacyHref}>{privacyLabel}</a>
+		<span aria-hidden="true">&middot;</span>
+		<a href="https://www.linkedin.com/in/ruth-lara-marketing-and-communications/" target="_blank" rel="noopener noreferrer">
+			LinkedIn
+		</a>
 	</p>
 </footer>
+
 <style>
 	footer {
 		display: flex;
@@ -50,7 +65,8 @@ const currentYear = new Date().getFullYear();
 	.socials {
 		display: flex;
 		justify-content: center;
-		gap: 1rem;
+		align-items: center;
+		gap: 0.75rem;
 		flex-wrap: wrap;
 	}
 
