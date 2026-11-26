@@ -1,1 +1,118 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+
+const pageTitle = 'Privacy & Cookie Policy | Ruth Lara Reyes';
+const pageDescription = 'EU GDPR Privacy and Cookie Policy for Ruth Lara Reyes (Florence, Italy).';
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+	<div class="stack gap-15">
+		<div class="wrapper">
+			<Hero
+				title="Privacy & Cookie Policy"
+				tagline="Information pursuant to Articles 13 and 14 of Regulation (EU) 2016/679 (GDPR). Last updated: November 2026."
+				align="start"
+			/>
+		</div>
+
+		<main class="wrapper content stack gap-8">
+			<section class="stack gap-3">
+				<h2>1. Data Controller</h2>
+				<p>
+					The Data Controller is <strong>Ruth Lara Reyes</strong>, based in Florence (FI), Italy.<br />
+					<strong>Contact Email:</strong> <a href="mailto:YOUR-EMAIL@DOMAIN.COM">YOUR-EMAIL@DOMAIN.COM</a>
+				</p>
+			</section>
+
+			<section class="stack gap-3">
+				<h2>2. Types of Data Processed, Purpose &amp; Legal Basis</h2>
+				<ul>
+					<li>
+						<strong>Browsing &amp; Technical Security Logs:</strong> When you visit this website, our
+						hosting infrastructure provider (<strong>Cloudflare, Inc.</strong>) automatically processes
+						technical connection data (such as IP address, browser type, and timestamp) strictly to
+						deliver pages securely and protect against malicious traffic. <em>Legal basis:</em>
+						Legitimate interest in website security and operation (Art. 6(1)(f) GDPR).
+					</li>
+					<li>
+						<strong>Direct Inquiries &amp; Appointment Bookings:</strong> If you contact me via email
+						or schedule a consultation through my external <strong>Google Calendar</strong> booking page,
+						I process your name, email address, and message details solely to respond to your inquiry
+						or conduct the requested call. <em>Legal basis:</em> Pre-contractual measures taken at your
+						request (Art. 6(1)(b) GDPR).
+					</li>
+				</ul>
+			</section>
+
+			<section class="stack gap-3">
+				<h2>3. Third-Party Service Providers &amp; International Transfers</h2>
+				<p>
+					Data may be processed by trusted technical providers acting as Data Processors under GDPR
+					Data Processing Agreements: <strong>Cloudflare</strong> (website hosting and CDN) and
+					<strong>Google Ireland Limited</strong> (email and appointment scheduling). Where data is
+					processed outside the European Economic Area (EEA), transfers are safeguarded by the EU–U.S.
+					Data Privacy Framework or European Commission Standard Contractual Clauses (SCCs).
+				</p>
+			</section>
+
+			<section class="stack gap-3">
+				<h2>4. Data Retention</h2>
+				<p>
+					Technical security logs are retained only for the brief period necessary for security
+					monitoring. Inquiry and booking data are retained only as long as needed to handle your
+					request or fulfill applicable legal and tax obligations.
+				</p>
+			</section>
+
+			<section class="stack gap-3">
+				<h2>5. Cookie &amp; Local Storage Notice</h2>
+				<p>
+					This website does <strong>not</strong> use advertising, profiling, or third-party tracking
+					cookies. It uses only strictly necessary technical browser storage (such as remembering your
+					light/dark theme preference), which does not require prior consent under EU ePrivacy rules
+					and the Italian Data Protection Authority (Garante Privacy) guidelines.
+				</p>
+			</section>
+
+			<section class="stack gap-3">
+				<h2>6. Your Rights Under the GDPR</h2>
+				<p>
+					Under Articles 15–22 of the GDPR, you have the right to request access to, rectification of,
+					or erasure of your personal data, as well as restriction of processing, data portability,
+					and objection. You may exercise these rights at any time by writing to
+					<a href="mailto:iteltur@gmail.com">iteltur@gmail.com</a>. You also have the right to
+					lodge a complaint with the Italian Supervisory Authority (<strong>Garante per la protezione dei dati personali</strong>,
+					<a href="https://garanteprivacy.it" target="_blank" rel="noopener noreferrer">www.garanteprivacy.it</a>)
+					or your local EU data protection authority.
+				</p>
+			</section>
+		</main>
+	</div>
+</BaseLayout>
+
+<style>
+	.content {
+		max-width: 68ch;
+		color: var(--gray-200);
+		line-height: 1.7;
+	}
+
+	.content h2 {
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content ul {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+		padding-left: 1.25rem;
+	}
+
+	.content a {
+		color: var(--accent-regular);
+		text-decoration: underline;
+	}
+</style>
 
