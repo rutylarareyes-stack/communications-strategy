@@ -1,1 +1,118 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+
+const pageTitle = 'Política de Privacidad y Cookies | Ruth Lara Reyes';
+const pageDescription = 'Información sobre el tratamiento de datos personales conforme al Reglamento (UE) 2016/679 (RGPD).';
+---
+
+<BaseLayout lang="es" title={pageTitle} description={pageDescription}>
+	<div class="stack gap-15">
+		<div class="wrapper">
+			<Hero
+				title="Política de Privacidad y Cookies"
+				tagline="Información conforme a los artículos 13 y 14 del Reglamento (UE) 2016/679 (RGPD). Última actualización: Noviembre de 2026."
+				align="start"
+			/>
+		</div>
+
+		<main class="wrapper content stack gap-8">
+			<section class="stack gap-3">
+				<h2>1. Responsable del Tratamiento</h2>
+				<p>
+					La Responsable del tratamiento de los datos personales es <strong>Ruth Lara Reyes</strong>, con
+					domicilio profesional en Florencia (FI), Italia.<br />
+					<strong>Correo electrónico de contacto:</strong> <a href="mailto:YOUR-EMAIL@DOMAIN.COM">YOUR-EMAIL@DOMAIN.COM</a>
+				</p>
+			</section>
+
+			<section class="stack gap-3">
+				<h2>2. Datos Tratados, Finalidad y Base Jurídica</h2>
+				<ul>
+					<li>
+						<strong>Registros técnicos de navegación y seguridad:</strong> Al visitar este sitio web,
+						el proveedor de alojamiento (<strong>Cloudflare, Inc.</strong>) procesa automáticamente
+						datos técnicos de conexión (como dirección IP, navegador y marca de tiempo) con el fin
+						exclusivo de garantizar la entrega segura de las páginas. <em>Base jurídica:</em> Interés
+						legítimo en la seguridad y el funcionamiento del sitio (art. 6.1.f RGPD).
+					</li>
+					<li>
+						<strong>Consultas directas y reserva de sesiones:</strong> Si me contactas por correo
+						electrónico o agendas una llamada mediante la página externa de <strong>Google Calendar</strong>,
+						trataré tu nombre, correo electrónico y consulta únicamente para responderte o realizar la
+						reunión solicitada. <em>Base jurídica:</em> Aplicación de medidas precontractuales a
+						petición del interesado (art. 6.1.b RGPD).
+					</li>
+				</ul>
+			</section>
+
+			<section class="stack gap-3">
+				<h2>3. Encargados del Tratamiento y Transferencias Internacionales</h2>
+				<p>
+					Los datos pueden ser tratados por proveedores tecnológicos que actúan como Encargados del
+					Tratamiento bajo acuerdos conformes al RGPD: <strong>Cloudflare</strong> (alojamiento y CDN) y
+					<strong>Google Ireland Limited</strong> (correo electrónico y agenda de citas). Cuando
+					existan transferencias fuera del Espacio Económico Europeo (EEE), estas se amparan en el
+					Marco de Privacidad de Datos UE-EE. UU. o en Cláusulas Contractuales Tipo de la Comisión Europea.
+				</p>
+			</section>
+
+			<section class="stack gap-3">
+				<h2>4. Plazo de Conservación</h2>
+				<p>
+					Los registros técnicos se conservan durante el tiempo mínimo indispensable para la
+					seguridad del servicio. Los datos de consultas o citas se conservan mientras sean necesarios
+					para atender tu solicitud o cumplir obligaciones legales aplicables.
+				</p>
+			</section>
+
+			<section class="stack gap-3">
+				<h2>5. Política de Cookies y Almacenamiento Local</h2>
+				<p>
+					Este sitio web <strong>no</strong> utiliza cookies publicitarias, de elaboración de perfiles
+					ni de seguimiento de terceros. Únicamente emplea almacenamiento técnico estrictamente
+					necesario (como recordar tu preferencia de modo claro u oscuro), el cual está exento de
+					consentimiento previo conforme a la normativa europea sobre privacidad electrónica.
+				</p>
+			</section>
+
+			<section class="stack gap-3">
+				<h2>6. Derechos de las Personas Interesadas</h2>
+				<p>
+					De acuerdo con los artículos 15 a 22 del RGPD, puedes ejercer tus derechos de acceso,
+					rectificación, supresión, limitación, portabilidad y oposición escribiendo a
+					<a href="mailto:iteltur@gmail.com">iteltur@gmail.com</a>. Asimismo, tienes derecho a
+					presentar una reclamación ante la autoridad de control italiana (<strong>Garante per la protezione dei dati personali</strong>,
+					<a href="https://garanteprivacy.it" target="_blank" rel="noopener noreferrer">www.garanteprivacy.it</a>)
+					o ante la autoridad de protección de datos de tu país en la UE.
+				</p>
+			</section>
+		</main>
+	</div>
+</BaseLayout>
+
+<style>
+	.content {
+		max-width: 68ch;
+		color: var(--gray-200);
+		line-height: 1.7;
+	}
+
+	.content h2 {
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content ul {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+		padding-left: 1.25rem;
+	}
+
+	.content a {
+		color: var(--accent-regular);
+		text-decoration: underline;
+	}
+</style>
 
