@@ -1,1 +1,119 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+
+const pageTitle = 'Informativa Privacy e Cookie | Ruth Lara Reyes';
+const pageDescription = 'Informativa sul trattamento dei dati personali ai sensi del Regolamento (UE) 2016/679 (GDPR).';
+---
+
+<BaseLayout lang="it" title={pageTitle} description={pageDescription}>
+	<div class="stack gap-15">
+		<div class="wrapper">
+			<Hero
+				title="Informativa Privacy e Cookie"
+				tagline="Informativa ai sensi degli artt. 13 e 14 del Regolamento (UE) 2016/679 (GDPR). Ultimo aggiornamento: Novembre 2026."
+				align="start"
+			/>
+		</div>
+
+		<main class="wrapper content stack gap-8">
+			<section class="stack gap-3">
+				<h2>1. Titolare del Trattamento</h2>
+				<p>
+					Il Titolare del trattamento dei dati personali è <strong>Ruth Lara Reyes</strong>, con sede a
+					Firenze (FI), Italia.<br />
+					<strong>Email di contatto:</strong> <a href="mailto:YOUR-EMAIL@DOMAIN.COM">YOUR-EMAIL@DOMAIN.COM</a>
+				</p>
+			</section>
+
+			<section class="stack gap-3">
+				<h2>2. Tipologia di Dati Trattati, Finalità e Base Giuridica</h2>
+				<ul>
+					<li>
+						<strong>Dati di navigazione e sicurezza tecnica:</strong> Durante la navigazione,
+						l’infrastruttura di hosting (<strong>Cloudflare, Inc.</strong>) tratta automaticamente
+						alcuni dati tecnici di connessione (es. indirizzo IP, tipo di browser, orario della
+						richiesta) esclusivamente per erogare il sito in sicurezza e prevenire attacchi
+						informatici. <em>Base giuridica:</em> Legittimo interesse del Titolare alla sicurezza e al
+						funzionamento del sito (art. 6, par. 1, lett. f, GDPR).
+					</li>
+					<li>
+						<strong>Richieste dirette e prenotazione consulenze:</strong> Qualora l’utente invii
+						un’email o prenoti un incontro tramite la pagina esterna di <strong>Google Calendar</strong>,
+						i dati conferiti (nome, indirizzo email, contenuto del messaggio) sono trattati
+						esclusivamente per rispondere alla richiesta o svolgere l’incontro. <em>Base giuridica:</em>
+						Esecuzione di misure precontrattuali adottate su richiesta dell’interessato (art. 6, par. 1,
+						lett. b, GDPR).
+					</li>
+				</ul>
+			</section>
+
+			<section class="stack gap-3">
+				<h2>3. Destinatari e Trasferimento Extra-UE</h2>
+				<p>
+					I dati possono essere trattati da fornitori tecnici nominati Responsabili del trattamento
+					(art. 28 GDPR), tra cui <strong>Cloudflare</strong> (hosting e rete CDN) e
+					<strong>Google Ireland Limited</strong> (posta elettronica e calendario appuntamenti).
+					Eventuali trasferimenti verso Paesi extra-SEE avvengono nel rispetto del Capo V del GDPR
+					(EU–U.S. Data Privacy Framework o Clausole Contrattuali Standard della Commissione Europea).
+				</p>
+			</section>
+
+			<section class="stack gap-3">
+				<h2>4. Periodo di Conservazione</h2>
+				<p>
+					I log tecnici di sicurezza sono conservati per il tempo strettamente necessario alla tutela
+					dell’infrastruttura. I dati relativi a richieste di contatto o consulenze sono conservati
+					per il tempo necessario a evadere la richiesta e adempiere agli eventuali obblighi di legge.
+				</p>
+			</section>
+
+			<section class="stack gap-3">
+				<h2>5. Informativa sui Cookie e Local Storage</h2>
+				<p>
+					Questo sito <strong>non</strong> utilizza cookie di profilazione, pubblicitari o di
+					tracciamento di terze parti. Viene utilizzato esclusivamente spazio di archiviazione tecnico
+					strettamente necessario (es. memorizzazione della preferenza tema chiaro/scuro), per il quale
+					non è richiesto il consenso preventivo ai sensi delle Linee Guida del Garante Privacy.
+				</p>
+			</section>
+
+			<section class="stack gap-3">
+				<h2>6. Diritti dell’Interessato</h2>
+				<p>
+					Ai sensi degli artt. 15–22 del GDPR, l’interessato può esercitare in qualsiasi momento i
+					diritti di accesso, rettifica, cancellazione, limitazione, portabilità e opposizione
+					scrivendo a <a href="mailto:iteltur@gmail.com">iteltur@gmail.com</a>. L’interessato
+					ha inoltre il diritto di proporre reclamo al <strong>Garante per la protezione dei dati personali</strong>
+					(<a href="https://garanteprivacy.it" target="_blank" rel="noopener noreferrer">www.garanteprivacy.it</a>).
+				</p>
+			</section>
+		</main>
+	</div>
+</BaseLayout>
+
+<style>
+	.content {
+		max-width: 68ch;
+		color: var(--gray-200);
+		line-height: 1.7;
+	}
+
+	.content h2 {
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content ul {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+		padding-left: 1.25rem;
+	}
+
+	.content a {
+		color: var(--accent-regular);
+		text-decoration: underline;
+	}
+</style>
 
